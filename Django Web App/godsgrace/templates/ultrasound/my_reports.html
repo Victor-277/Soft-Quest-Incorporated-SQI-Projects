@@ -1,0 +1,52 @@
+{% extends 'ultrasound/base.html' %}
+{% load static %}
+
+{% block title %}My Reports - Dr. God's Grace Ultrasound{% endblock %}
+
+{% block content %}
+<h2 class="mb-4 page-title">My Reports</h2>
+
+{% if patient_record %}
+    {% if reports %}
+    <div class="card">
+        <div class="card-header">
+            <h5 class="mb-0">Recent Reports</h5>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Scan Date</th>
+                            <th>Report ID</th>
+                            <th>Doctor</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for report in reports %}
+                        <tr>
+                            <td>{{ report.scan_date|date:"M j, Y" }}</td>
+                            <td>{{ report.report_id|truncatechars:8 }}</td>
+                            <td>Dr. {{ report.doctor.get_full_name }}</td>
+                            <td>
+                                <a href="{% url 'ultrasound:print_report' report.report_id %}" class="btn btn-sm btn-outline-primary">View</a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <div class="alert alert-info mt-4">
+        You have no reports yet.
+    </div>
+    {% endif %}
+{% else %}
+<div class="alert alert-warning mt-4">
+    Patient profile not found. Please contact the administrator.
+</div>
+{% endif %}
+{% endblock %}

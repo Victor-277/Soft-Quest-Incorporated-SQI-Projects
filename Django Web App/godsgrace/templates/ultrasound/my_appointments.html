@@ -1,0 +1,54 @@
+{% extends 'ultrasound/base.html' %}
+{% load static %}
+
+{% block title %}My Appointments - Dr. God's Grace Ultrasound{% endblock %}
+
+{% block content %}
+<h2 class="mb-4 page-title">My Appointments</h2>
+
+{% if appointments %}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">Upcoming Appointments</h5>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Reason</th>
+                                <th>Status</th>
+                                <th>Doctor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for appointment in appointments %}
+                            <tr>
+                                <td>{{ appointment.appointment_date|date:"M j, Y" }}</td>
+                                <td>{{ appointment.appointment_time|time:"g:i A" }}</td>
+                                <td>{{ appointment.reason|truncatechars:50 }}</td>
+                                <td>
+                                    <span class="badge bg-{% if appointment.status == 'confirmed' %}success{% elif appointment.status == 'scheduled' %}warning{% else %}secondary{% endif %}">
+                                        {{ appointment.get_status_display }}
+                                    </span>
+                                </td>
+                                <td>Dr. {{ appointment.doctor.get_full_name }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% else %}
+<div class="alert alert-info mt-4">
+    You have no appointments scheduled.
+</div>
+{% endif %}
+{% endblock %}

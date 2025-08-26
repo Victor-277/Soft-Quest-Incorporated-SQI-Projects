@@ -1,0 +1,49 @@
+{% extends "common_page.html" %}
+
+{% block title %} UPDATE FORM {% endblock title%}
+
+{% block body_content %}
+<div>
+    <div class='row'>
+      <div class='col-3'></div>
+      <div class='col-md-6 col-12 col-offset-3'>
+            <form method="post" class="mt-4">
+                {% csrf_token %}
+                {% load bootstrap %}
+                <p><span class="date text-pink text-size-30px mt-5">
+                        {% if messages %}
+                            {% for message in messages %}
+                                {{message}}
+                            {% endfor %}
+                        {% endif %}</span>
+                </p>
+
+                {{user_form|bootstrap}}
+
+             {%  if request.user.is_superuser %}
+
+                 {{profile_form|bootstrap}}
+                 {% else %}
+                 {{profile_form.address|bootstrap}}
+                 {{profile_form.phone|bootstrap}}
+                 {{profile_form.date_of_birth|bootstrap}}
+                 {{profile_form.nationality|bootstrap}}
+                 {{profile_form.state|bootstrap}}
+                 {{profile_form.profile_picture|bootstrap}}
+                 {{profile_form.next_of_kin|bootstrap}}
+                 {{profile_form.Identity_card_name|bootstrap}}
+                 {{profile_form.Identity_card_number|bootstrap}}
+                 {{profile_form.marital_status|bootstrap}}
+                 {% endif %}
+
+                <div class='d-flex justify-content-center'>
+                <input class="bc-white mt-2 ml-2 me-3 loginbutton" type="submit" value="Update">
+                
+                </div>
+        </form>  
+      </div>
+      </div>
+      <div class='col-3'></div> 
+    </div>
+</div>
+{% endblock body_content %}

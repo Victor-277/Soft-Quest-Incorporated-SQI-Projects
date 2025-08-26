@@ -1,0 +1,193 @@
+{% extends 'ultrasound/base.html' %}
+{% load static %}
+
+{% block title %}Admin Dashboard - Dr. God's Grace Ultrasound{% endblock %}
+
+{% block content %}
+<h2 class="mb-4 page-title">Admin Dashboard</h2>
+
+<!-- Stats Boxes -->
+<div class="row g-4">
+    <div class="col-md-3">
+        <div class="stats-box">
+            <div class="icon-circle">
+                <i class="fas fa-user-injured"></i>
+            </div>
+            <h4>Total Patients</h4>
+            <h2>{{ total_patients }}</h2>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="stats-box" style="background: linear-gradient(135deg, #28a745, #85d17f);">
+            <div class="icon-circle">
+                <i class="fas fa-file-medical"></i>
+            </div>
+            <h4>Total Reports</h4>
+            <h2>{{ total_reports }}</h2>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="stats-box" style="background: linear-gradient(135deg, #17a2b8, #63c7d7);">
+            <div class="icon-circle">
+                <i class="fas fa-calendar-day"></i>
+            </div>
+            <h4>Today's Reports</h4>
+            <h2>{{ today_reports }}</h2>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="stats-box" style="background: linear-gradient(135deg, #ffc107, #ffdd57); color: #070b56;">
+            <div class="icon-circle">
+                <i class="fas fa-tasks"></i>
+            </div>
+            <h4>Pending Reports</h4>
+            <h2>{{ pending_reports }}</h2>
+        </div>
+    </div>
+</div>
+
+<!-- More Stats -->
+<div class="row g-4 mt-3">
+    <div class="col-md-4">
+        <div class="stats-box" style="background: linear-gradient(135deg, #6f42c1, #d63384);">
+            <div class="icon-circle">
+                <i class="fas fa-calendar-alt"></i>
+            </div>
+            <h4>Total Appointments</h4>
+            <h2>{{ total_appointments }}</h2>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="stats-box" style="background: linear-gradient(135deg, #fd7e14, #ffc107); color: #070b56;">
+            <div class="icon-circle">
+                <i class="fas fa-clock"></i>
+            </div>
+            <h4>Today's Appointments</h4>
+            <h2>{{ today_appointments }}</h2>
+        </div>
+    </div>
+<!-- Staff Stats -->
+    <div class="col-md-4">
+        <div class="stats-box" style="background: linear-gradient(135deg, #007bff, #66b2ff);">
+            <div class="icon-circle">
+                <i class="fas fa-user-md"></i>
+            </div>
+            <h4>Total Doctors</h4>
+            <h2>{{ total_doctors }}</h2>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="stats-box" style="background: linear-gradient(135deg, #28a745, #85d17f);">
+            <div class="icon-circle">
+                <i class="fas fa-user-tie"></i>
+            </div>
+            <h4>Total Receptionists</h4>
+            <h2>{{ total_receptionists }}</h2>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="stats-box" style="background: linear-gradient(135deg, #6f42c1, #d63384);">
+            <div class="icon-circle">
+                <i class="fas fa-users"></i>
+            </div>
+            <h4>Total Staff</h4>
+            <h2>{{ total_staff }}</h2>
+        </div>
+    </div>
+</div>
+
+
+<!-- Recent Reports Table -->
+<div class="row mt-5">
+    <div class="col-12">
+        <div class="card report-form">
+            <div class="card-header">
+                <h5 class="mb-0">Recent Reports</h5>
+            </div>
+            <div class="card-body">
+                {% if recent_reports %}
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Scan Date</th>
+                                <th>Report ID</th>
+                                <th>Patient</th>
+                                <th>Doctor</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for report in recent_reports %}
+                            <tr>
+                                <td>{{ report.scan_date|date:"M j, Y" }}</td>
+                                <td>{{ report.report_id }}</td>
+                                <td>{{ report.patient.full_name }}</td>
+                                <td>Dr. {{ report.doctor.get_full_name }}</td>
+                                <td>
+                                    <a href="{% url 'ultrasound:view_report_detail' report.report_id %}" class="btn btn-sm btn-outline-primary">View</a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                {% else %}
+                <p>No recent reports.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Recent Appointments Table -->
+<div class="row mt-4">
+    <div class="col-12">
+        <div class="card report-form">
+            <div class="card-header">
+                <h5 class="mb-0">Recent Appointments</h5>
+            </div>
+            <div class="card-body">
+                {% if recent_appointments %}
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Patient</th>
+                                <th>Doctor</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for appointment in recent_appointments %}
+                            <tr>
+                                <td>{{ appointment.appointment_date|date:"M j, Y" }}</td>
+                                <td>{{ appointment.appointment_time|time:"g:i A" }}</td>
+                                <td>{{ appointment.patient.full_name }}</td>
+                                <td>Dr. {{ appointment.doctor.get_full_name }}</td>
+                                <td>
+                                    <span class="badge bg-{% if appointment.status == 'confirmed' %}success{% elif appointment.status == 'scheduled' %}warning{% else %}secondary{% endif %}">
+                                        {{ appointment.get_status_display }}
+                                    </span>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                {% else %}
+                <p>No recent appointments.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

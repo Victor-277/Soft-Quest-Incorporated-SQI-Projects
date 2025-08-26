@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login | God's Grace Ultrasound</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .login-container {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 25px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 450px;
+        }
+        .clinic-logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .clinic-logo img {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 15px;
+        }
+        .clinic-name {
+            color: #070b56;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+        .clinic-subtitle {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+        .form-control {
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            padding: 12px 16px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        .form-control:focus {
+            border-color: #070b56;
+            box-shadow: 0 0 0 0.2rem rgba(7, 11, 86, 0.25);
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #070b56, #2575fc);
+            border: none;
+            border-radius: 8px;
+            padding: 14px;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #2575fc, #070b56);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(7, 11, 86, 0.3);
+        }
+        .form-label {
+            font-weight: 600;
+            color: #070b56;
+            margin-bottom: 8px;
+        }
+        .alert {
+            border-radius: 8px;
+            border: none;
+        }
+        .alert-danger {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .alert-success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .password-wrapper {
+            position: relative;
+        }
+        .toggle-password {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #6c757d;
+            font-size: 1.2rem;
+        }
+       
+        input, textarea, select {
+          width: 100%;
+          padding: 10px 14px;
+          margin: 8px 0;
+          border: 1px solid #ccc;
+          border-radius: 8px;
+          font-size: 14px;
+          font-family: 'Segoe UI', Tahoma, sans-serif;
+          transition: all 0.3s ease;
+          box-sizing: border-box;
+        }
+
+
+        input:focus, textarea:focus, select:focus {
+          border-color: #070b56;  
+          box-shadow: 0 0 6px rgba(7, 11, 86, 0.4);
+          outline: none;
+        }
+
+
+        input::placeholder, textarea::placeholder {
+          color: #999;
+          font-style: italic;
+        }
+
+
+        input:disabled, textarea:disabled {
+          background: #f5f5f5;
+          color: #777;
+          cursor: not-allowed;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="clinic-logo">
+            <img src="https://img.icons8.com/ios-filled/50/070b56/stethoscope.png" alt="stethoscope icon">
+            <div class="clinic-name">God's Grace Ultrasound</div>
+            <div class="clinic-subtitle">Professional Diagnostic Services</div>
+        </div>
+
+        <h2 class="text-center mb-4" style="color: #070b56; font-weight: 600;">User Login</h2>
+
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endfor %}
+        {% endif %}
+
+        <form method="post" action="{% url 'ultrasound:login' %}">
+            {% csrf_token %}
+
+            <div class="mb-3">
+                <label for="{{ form.username.id_for_label }}" class="form-label">Username</label>
+                {{ form.username }}
+                {% if form.username.errors %}
+                    <div class="text-danger small mt-1">
+                        {% for error in form.username.errors %}
+                            {{ error }}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+
+            <div class="mb-4 password-wrapper">
+                <label for="{{ form.password.id_for_label }}" class="form-label">Password</label>
+                {{ form.password }}
+                <i class="bi bi-eye toggle-password" id="togglePassword"></i>
+                {% if form.password.errors %}
+                    <div class="text-danger small mt-1">
+                        {% for error in form.password.errors %}
+                            {{ error }}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100 mb-3">
+                Login
+            </button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const togglePassword = document.querySelector("#togglePassword");
+        const passwordInput = document.querySelector("#id_password");
+
+        togglePassword.addEventListener("click", function () {
+            const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+            passwordInput.setAttribute("type", type);
+            this.classList.toggle("bi-eye");
+            this.classList.toggle("bi-eye-slash");
+        });
+    </script>
+</body>
+</html>

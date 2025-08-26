@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>School App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+    <!-- navbar starts -->
+          <nav class="navv">
+             <div class="mx-auto me-0" style="width: 80px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class=" cont  bi bi-person-circle " style="width: 50px;height:30px;" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                </svg> 
+             </div>
+          </nav>
+          <nav> 
+           <div class="container-fluid">
+              <div class="row flex-nowrap">
+                  <div class="naver col-auto col-md-4 col-lg-3 min-vh-100  d-flex flex-column justify-content-between">
+                      <div class="p-2">
+                          <a class="d-flex  text-decoration-none align-items-center">
+                              <span class="fs-1 d-none d-sm-inline cont">School app</span> 
+                          </a>
+                          <ul class="nav nav-pill flex-column ">
+                                  <li class="nav-item py-2 py-sm-2">
+                                    <a class="nav-link "  href="index.html">
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-speedometer cont"  viewBox="0 0 16 16">
+                                          <path d="M8 2a.5.5 0 0 1 .5.5V4a.5.5 0 0 1-1 0V2.5A.5.5 0 0 1 8 2M3.732 3.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707M2 8a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8m9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5m.754-4.246a.39.39 0 0 0-.527-.02L7.547 7.31A.91.91 0 1 0 8.85 8.569l3.434-4.297a.39.39 0 0 0-.029-.518z"/>
+                                          <path fill-rule="evenodd" d="M6.664 15.889A8 8 0 1 1 9.336.11a8 8 0 0 1-2.672 15.78zm-4.665-4.283A11.95 11.95 0 0 1 8 10c2.186 0 4.236.585 6.001 1.606a7 7 0 1 0-12.002 0"/>
+                                        </svg>
+                                      <span class="d-none d-sm-inline cont">Dashboard</span>
+                                    </a>
+                                  </li>
+                                  <li class="nav-item py-2 py-sm-2">
+                                      <a class="nav-link"  href="profile.html">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class=" cont  bi bi-person-circle" viewBox="0 0 16 16">
+                                              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                                              <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                                            </svg> 
+                                          <span class="d-none d-sm-inline cont ">Profile</span>
+                                      </a>
+                                  </li>
+                                  <li class="nav-item py-2 py-sm-2">
+                                      <a class="nav-link "  href="registration.html">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class=" cont bi bi-list" viewBox="0 0 16 16">
+                                              <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                                            </svg>
+                                          <span class="d-none d-sm-inline cont " >Registration</span>
+                                      </a>
+                                    
+                                  </li> 
+                                  <li class="nav-item py-2 py-sm-2">
+                                      <a class="nav-link "  href="payment.html">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class=" cont bi bi-credit-card-2-back-fill" viewBox="0 0 16 16">
+                                              <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5H0zm11.5 1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM0 11v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-1z"/>
+                                            </svg>
+                                          <span class="d-none d-sm-inline cont ">Payment</span>
+                                      </a>
+                                    
+                                  </li>                        
+                                  <li class="nav-item py-2 py-sm-2">
+                                      <a class="nav-link "  href="courses.html">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class=" cont bi bi-book-half" viewBox="0 0 16 16">
+                                          <path d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783"/>
+                                        </svg>
+                                          <span class="d-none d-sm-inline cont ">Courses</span>
+                                      </a>
+                                    
+                                  </li>                             
+                                  <li class="nav-item py-2 py-sm-2">
+                                      <a class="nav-link "  href="result.html">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class=" cont bi bi-file-earmark-medical-fill" viewBox="0 0 16 16">
+                                              <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1m-3 2v.634l.549-.317a.5.5 0 1 1 .5.866L7 7l.549.317a.5.5 0 1 1-.5.866L6.5 7.866V8.5a.5.5 0 0 1-1 0v-.634l-.549.317a.5.5 0 1 1-.5-.866L5 7l-.549-.317a.5.5 0 0 1 .5-.866l.549.317V5.5a.5.5 0 1 1 1 0m-2 4.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1m0 2h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1"/>
+                                            </svg>
+                                          </i><span class="d-none d-sm-inline cont ">Result</span>
+                                      </a>
+                                    
+                                  </li>                             
+                                  <li class="nav-item py-2 py-sm-2">
+                                      <a class="nav-link "  href="notice.html">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class=" cont bi bi-bell-fill" viewBox="0 0 16 16">
+                                              <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901"/>
+                                            </svg>
+                                          <span class="d-none d-sm-inline cont ">Notice</span>
+                                      </a>
+                                    
+                                  </li>                             
+                                  <li class="nav-item py-2 py-sm-2">
+                                      <a class="nav-link "  href="schedule.html">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class=" cont bi bi-table" viewBox="0 0 16 16">
+                                              <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm15 2h-4v3h4zm0 4h-4v3h4zm0 4h-4v3h3a1 1 0 0 0 1-1zm-5 3v-3H6v3zm-5 0v-3H1v2a1 1 0 0 0 1 1zm-4-4h4V8H1zm0-4h4V4H1zm5-3v3h4V4zm4 4H6v3h4z"/>
+                                            </svg>
+                                          <span class="d-none d-sm-inline cont ">Schedule</span>
+                                      </a>
+                                    
+                                  </li>   
+                                  <li class="nav-item py-2 py-sm-2" >
+                                    <a class="nav-link "  href="logout.html">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class=" cont bi bi-box-arrow-right" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/>
+                                            <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
+                                          </svg>
+                                        <span class="d-none d-sm-inline cont">Logout</span>                          
+                                  <li class="nav-item py-2 py-sm-2" >
+                                      <a class="nav-link "  href="settings.html">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-fill cont" viewBox="0 0 16 16">
+                                          <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
+                                        </svg>
+                                          <span class="d-none d-sm-inline cont ">Settings</span>
+                                      </a>
+                                    
+                                  </li>                             
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+           </div>
+          </nav>
+  <!-- navbar ends       -->
+  
+  <section class="register"> 
+    <table class="table-bordered " style="width:100%">
+      <h1 class="text-center mb-5">TIME-TABLE</h1>
+        <tr>
+          <th>DAYS</th>
+          <th>COURSE CODE</th>
+          <th>COURSE TITLE</th> 
+          <th>UNITS</th>
+          <th>TIME</th>
+        </tr>
+        <tr> 
+          <td>MONDAY</td>
+          <td>GST 111 <hr>COS 101 <hr>MTH 101</td>
+          <td>Communication in English <hr>Introduction to computing <hr>Elementary Mathematics</td>
+          <td>2 <hr>2 <hr>2</td>
+          <td>8:00am-9:00am <hr>9:00am-10:00am <hr>10:00am-12:00pm</td>
+        </tr>
+        <tr> 
+          <td>TUESDAY</td>
+          <td>GST 111 <hr>COS 101 <hr>MTH 101</td>
+          <td>Communication in English <hr>Introduction to computing <hr>Elementary Mathematics</td>
+          <td>2 <hr>2 <hr>2</td>
+          <td>8:00am-9:00am <hr>9:00am-10:00am <hr>10:00am-12:00pm</td>
+        </tr>
+        <tr> 
+          <td>WEDNESDAY</td>
+          <td>GST 111 <hr>COS 101 <hr>MTH 101</td>
+          <td>Communication in English <hr>Introduction to computing <hr>Elementary Mathematics</td>
+          <td>2 <hr>2 <hr>2</td>
+          <td>8:00am-9:00am <hr>9:00am-10:00am <hr>10:00am-12:00pm</td>
+        </tr>
+        <tr>
+          <td>THURSDAY</td>
+          <td>GST 111 <hr>COS 101 <hr>MTH 101</td>
+          <td>Communication in English <hr>Introduction to computing <hr>Elementary Mathematics</td>
+          <td>2 <hr>2 <hr>2</td>
+          <td>8:00am-9:00am <hr>9:00am-10:00am <hr>10:00am-12:00pm</td>
+        </tr>
+        <tr> 
+          <td>FRIDAY</td>
+          <td>GST 111 <hr>COS 101 <hr>MTH 101</td>
+          <td>Communication in English <hr>Introduction to computing <hr>Elementary Mathematics</td>
+          <td>2 <hr>2 <hr>2</td>
+          <td>8:00am-9:00am <hr>9:00am-10:00am <hr>10:00am-12:00pm</td>
+        </tr>
+        <tr> 
+          <td>SATURDAY</td>
+          <td>GST 111 <hr>COS 101 <hr>MTH 101</td>
+          <td>Communication in English <hr>Introduction to computing <hr>Elementary Mathematics</td>
+          <td>2 <hr>2 <hr>2</td>
+          <td>8:00am-9:00am <hr>9:00am-10:00am <hr>10:00am-12:00pm</td>
+        </tr>
+       </table>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

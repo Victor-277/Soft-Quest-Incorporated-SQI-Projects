@@ -1,0 +1,93 @@
+{% extends 'ultrasound/base.html' %}
+{% load static %}
+
+{% block title %}Edit Report - {{ report.patient.full_name }}{% endblock %}
+
+{% block content %}
+<div class="container my-5 report-form">
+    <h3 class="text-center fw-bold clinic-name">
+        GOD'S GRACE ULTRASOUND DIAGNOSTIC SERVICE
+    </h3>
+    <p class="text-center">OJU ODO LAGBONDOKO AGUNPOPO ROAD, OYO</p>
+    <hr>
+
+    <form method="POST">
+        {% csrf_token %}
+        
+        <!-- Patient & Report Info -->
+        <div class="row mb-3">
+            <div class="col-md-4">
+                <label for="patient" class="form-label"><strong>Patient:</strong></label>
+                <input type="text" class="form-control" id="patient" value="{{ report.patient.full_name }}" disabled>
+            </div>
+            <div class="col-md-4">
+                <label for="doctor" class="form-label"><strong>Doctor:</strong></label>
+                <input type="text" class="form-control" id="doctor" value="{{ report.doctor.get_full_name }}" disabled>
+            </div>
+            <div class="col-md-4">
+                <label for="scan_date" class="form-label"><strong>Date:</strong></label>
+                <input type="date" class="form-control" name="scan_date" id="scan_date" value="{{ report.scan_date|date:'Y-m-d' }}">
+            </div>
+        </div>
+
+        <!-- Fetal Information -->
+        <h5 class="mt-4">Fetal Information</h5>
+        <div class="row mb-2">
+            <div class="col-md-4">
+                <label for="scan_type" class="form-label"><strong>Scan Type:</strong></label>
+                <input type="text" class="form-control" name="scan_type" id="scan_type" value="{{ report.scan_type }}">
+            </div>
+            <div class="col-md-4">
+                <label for="fetal_position" class="form-label"><strong>Fetal Position:</strong></label>
+                <input type="text" class="form-control" name="fetal_position" id="fetal_position" value="{{ report.fetal_position }}">
+            </div>
+            <div class="col-md-4">
+                <label for="fetal_status" class="form-label"><strong>Fetal Status:</strong></label>
+                <input type="text" class="form-control" name="fetal_status" id="fetal_status" value="{{ report.fetal_status }}">
+            </div>
+        </div>
+
+        <!-- Fetal Measurements -->
+        <h5 class="mt-4">Fetal Measurements</h5>
+        <p class="small text-muted">*Values are in mm / weeks as applicable*</p>
+        <table class="table table-sm table-bordered text-center align-middle">
+            <tr>
+                <th>BDP (mm/weeks)</th><td><input type="text" class="form-control" name="bdp" value="{{ report.bdp }}"></td>
+                <th>CRL (mm/weeks)</th><td><input type="text" class="form-control" name="crl" value="{{ report.crl }}"></td>
+                <th>FL (mm/weeks)</th><td><input type="text" class="form-control" name="fl" value="{{ report.fl }}"></td>
+            </tr>
+            <tr>
+                <th>HC (mm/weeks)</th><td><input type="text" class="form-control" name="hc" value="{{ report.hc }}"></td>
+                <th>AC (mm/weeks)</th><td><input type="text" class="form-control" name="ac" value="{{ report.ac }}"></td>
+                <th>Sex</th><td><input type="text" class="form-control" name="suspected_sex" value="{{ report.suspected_sex }}"></td>
+            </tr>
+            <tr>
+                <th colspan="2">Average Fetal Age (weeks)</th>
+                <td colspan="4"><input type="text" class="form-control" name="average_fetal_age" value="{{ report.average_fetal_age }}"></td>
+            </tr>
+        </table>
+
+        <!-- Placenta -->
+        <h5 class="mt-4">Placenta</h5>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label class="form-label"><strong>Position:</strong></label>
+                <input type="text" class="form-control" name="placenta_position" value="{{ report.placenta_position }}">
+            </div>
+            <div class="col-md-6">
+                <label class="form-label"><strong>Maturity:</strong></label>
+                <input type="text" class="form-control" name="placenta_maturity" value="{{ report.placenta_maturity }}">
+            </div>
+        </div>
+
+        <!-- Remarks -->
+        <h5 class="mt-4">Remarks</h5>
+        <textarea class="form-control" name="remarks" rows="4">{{ report.remarks }}</textarea>
+
+        <div class="text-center mt-4">
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+            <a href="{% url 'ultrasound:view_report_detail' report.report_id %}" class="btn btn-secondary">Cancel</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

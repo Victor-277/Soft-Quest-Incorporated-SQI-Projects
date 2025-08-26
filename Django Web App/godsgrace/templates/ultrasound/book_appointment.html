@@ -1,0 +1,55 @@
+{% extends 'ultrasound/base.html' %}
+{% load static %}
+
+{% block title %}Book Appointment{% endblock %}
+
+{% block content %}
+<h2 class="mb-4 page-title">Book New Appointment</h2>
+
+{% if patient_record %}
+<div class="report-form">
+    <form method="POST">
+        {% csrf_token %}
+
+        <div class="mb-3">
+            <label>Doctor</label>
+            <select name="doctor_id" class="form-control" required>
+                <option value="">Select Doctor</option>
+                {% for doctor in doctors %}
+                    <option value="{{ doctor.id }}">{{ doctor.user.get_full_name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label>Date</label>
+            <input type="date" name="appointment_date" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+            <label>Time</label>
+            <input type="time" name="appointment_time" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+            <label>Reason</label>
+            <input type="text" name="reason" class="form-control" placeholder="Optional">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Book Appointment</button>
+    </form>
+</div>
+{% else %}
+<div class="alert alert-warning mt-4">
+    Patient profile not found. Please contact the administrator.
+</div>
+{% endif %}
+{% endblock %}
+
+
+
+
+
+
+
+

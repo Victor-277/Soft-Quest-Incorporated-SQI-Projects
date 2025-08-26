@@ -1,0 +1,170 @@
+{% extends 'ultrasound/base.html' %}
+{% block title %}Receptionist Dashboard{% endblock %}
+
+{% block content %}
+<h2 class="mb-4 page-title">Receptionist Dashboard</h2>
+
+<div class="row mb-4">
+    <!-- Register Patient -->
+    <div class="col-md-6">
+        <div class="report-form">
+            <h5>Register New Patient</h5>
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" name="register_patient" class="btn btn-primary mt-2">Add Patient</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Search Patient -->
+    <div class="col-md-6">
+        <div class="report-form">
+            <h5>Search Patient</h5>
+            <form method="GET">
+                <input type="text" name="q" class="form-control mb-2" placeholder="Search by name or phone" value="{{ query }}">
+                <button type="submit" class="btn btn-info">Search</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">Patients</h5>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Phone</th>
+                                <th>DOB</th>
+                                <th>Gender</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for patient in patients %}
+                            <tr>
+                                <td>{{ patient.full_name }}</td>
+                                <td>{{ patient.phone }}</td>
+                                <td>{{ patient.date_of_birth|date:"M j, Y" }}</td>
+                                <td>{{ patient.get_gender_display }}</td>
+                                <td>
+                                    <a href="{% url 'ultrasound:book_appointment' %}?patient_id={{ patient.id }}" class="btn btn-sm btn-success">
+                                       Book Appointment
+                                    </a>
+                                </td>
+                            </tr>
+                            {% empty %}
+                            <tr>
+                                <td colspan="5" class="text-center">No patients found.</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Existing Patients section stays -->
+
+<div class="row mt-5">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">Reports Ready for Printing</h5>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Patient</th>
+                                <th>Doctor</th>
+                                <th>Date</th>
+                                <th>Scan Type</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for report in reports %}
+                            <tr>
+                                <td>{{ report.patient.full_name }}</td>
+                                <td>{{ report.doctor.get_full_name }}</td>
+                                <td>{{ report.scan_date|date:"M j, Y" }}</td>
+                                <td>{{ report.scan_type|title }}</td>
+                                <td>{{ report.status|title }}</td>
+                                <td>
+                                    <button class="btn btn-sm btn-info" onclick="openReport('{{ report.report_id }}')">View / Print</button>
+
+                                    {% if report.status != 'printed' %}
+                                    <form method="POST" action="{% url 'ultrasound:mark_report_printed' report.report_id %}" class="d-inline">
+                                        {% csrf_token %}
+                                        <button type="submit" class="btn btn-sm btn-success">Mark as Printed</button>
+                                    </form>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                            {% empty %}
+                            <tr>
+                                <td colspan="6" class="text-center">No reports ready for printing.</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+let reportWindow = null;
+
+// Helper to get CSRF token
+function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let cookie of cookies) {
+            cookie = cookie.trim();
+            if (cookie.startsWith(name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+
+function openReport(reportId) {
+    // Send AJAX POST to mark as printed
+    fetch(`/report/${reportId}/printed/`, {
+        method: 'POST',
+        headers: {
+            'X-CSRFToken': getCookie('csrftoken'),
+        },
+    }).then(() => {
+        const url = `/report/${reportId}/`;
+        const windowName = 'ReportWindow';
+
+        // Reuse popup if already open
+        if (reportWindow && !reportWindow.closed) {
+            reportWindow.location.href = url;
+            reportWindow.focus();
+        } else {
+            reportWindow = window.open(url, windowName, 'width=900,height=600,scrollbars=yes,resizable=yes');
+        }
+    });
+}
+</script>
+{% endblock %}
+
+
+

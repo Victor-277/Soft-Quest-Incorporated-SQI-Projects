@@ -1,0 +1,202 @@
+{% extends 'ultrasound/base.html' %}
+{% load static %}
+
+{% block title %}Ultrasound Report - {{ report.patient.full_name }}{% endblock %}
+
+{% block content %}
+<style>
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    .report-sheet, .report-sheet * {
+        visibility: visible;
+    }
+    .report-sheet {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+    .button {
+        display: none;
+    }
+
+    * {
+        -webkit-print-color-adjust: exact !important;
+        color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+}
+</style>
+
+
+<div class="container my-5">
+    <!-- Card-style container for the report -->
+    <div class="report-sheet p-4 shadow-lg rounded-4 border border-light bg-white" style="max-width:900px; margin:auto;">
+        <h3 class="text-center fw-bold clinic-name mb-1">
+            GOD'S GRACE ULTRASOUND DIAGNOSTIC SERVICE
+        </h3>
+        <p class="text-center text-muted mb-3" style="font-size:0.9rem;">OJU ODO LAGBONDOKO AGUNPOPO ROAD, OYO</p>
+        <hr class="mb-4">
+
+        <!-- Patient & Report Info -->
+        <div class="row mb-3">
+            <div class="col-md-4"><strong>Patient:</strong> {{ report.patient.full_name }}</div>
+            <div class="col-md-4"><strong>Doctor:</strong> {{ report.doctor.get_full_name }}</div>
+            <div class="col-md-4"><strong>Date:</strong> {{ report.scan_date|date:"d M Y" }}</div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-4"><strong>Hospital:</strong> {{ report.hospital }}</div>
+            <div class="col-md-4"><strong>Indication:</strong> {{ report.indication }}</div>
+            <div class="col-md-4"><strong>Pregnancy Type:</strong> {{ report.pregnancy_type|title }}</div>
+        </div>
+
+        <!-- Fetal Information -->
+        <h5 class="mt-4">Fetal Information</h5>
+        <div class="row mb-2">
+            <div class="col-md-4"><strong>Scan Type:</strong> {{ report.scan_type|title }}</div>
+            <div class="col-md-4"><strong>Fetal Position:</strong> {{ report.fetal_position|title }}</div>
+            <div class="col-md-4"><strong>Fetal Status:</strong> {{ report.fetal_status|title }}</div>
+        </div>
+
+        <!-- Measurements -->
+        <h5 class="mt-4" style="color: #070b56;">Fetal Measurements</h5>
+        <p class="small text-muted">*Values are in mm / weeks as applicable*</p>
+        <table class="table table-sm table-bordered text-center align-middle">
+            <tr>
+                <th style="color: #070b56; background-color: #fff;">BDP (mm/weeks)</th>
+                <td style="color: #070b56;">{{ report.bdp }}</td>
+                <th style="color: #070b56; background-color: #fff;">CRL (mm/weeks)</th>
+                <td style="color: #070b56;">{{ report.crl }}</td>
+                <th style="color: #070b56; background-color: #fff;">FL (mm/weeks)</th>
+                <td style="color: #070b56;">{{ report.fl }}</td>
+            </tr>
+            <tr>
+                <th style="color: #070b56; background-color: #fff;">HC (mm/weeks)</th>
+                <td style="color: #070b56;">{{ report.hc }}</td>
+                <th style="color: #070b56; background-color: #fff;">AC (mm/weeks)</th>
+                <td style="color: #070b56;">{{ report.ac }}</td>
+                <th style="color: #070b56; background-color: #fff;">Sex</th>
+                <td style="color: #070b56;">{{ report.suspected_sex }}</td>
+            </tr>
+            <tr>
+                <th colspan="2" style="color: #070b56; background-color: #fff;">Average Fetal Age (weeks)</th>
+                <td colspan="4" style="color: #070b56;">{{ report.average_fetal_age }}</td>
+            </tr>
+        </table>
+
+        <!-- Placenta -->
+        <h5 class="mt-4">Placenta</h5>
+        <p>
+            <strong>Position:</strong> {{ report.placenta_position|title }} <br>
+            <strong>Maturity:</strong> {{ report.placenta_maturity|title }}
+        </p>
+
+        <!-- Cervix & Liquor -->
+        <h5 class="mt-4">Cervix & Liquor</h5>
+        <p>
+            <strong>Distance from Cervix:</strong> {{ report.distance_from_cervix }} <br>
+            <strong>Pravaria:</strong> {{ report.pravaria }} <br>
+            <strong>Cervical OS:</strong> {{ report.cervical_os|title }} ({{ report.cervical_os_measurement }} mm)<br>
+            <strong>Intact Cervix Length:</strong> {{ report.intact_cervix_length }}
+        </p>
+
+        <!-- Liquor & EFW -->
+        <h5 class="mt-4">Liquor & EFW</h5>
+        <p>
+            <strong>Liquor Volume:</strong> {{ report.liquor_volume|title }} <br>
+            <strong>AFI:</strong> {{ report.afi }} <br>
+            <strong>EFW:</strong> {{ report.efw }}
+        </p>
+
+        <!-- Dates & Anomalies -->
+        <h5 class="mt-4">Dates & Anomalies</h5>
+        <p>
+            <strong>USS LMP:</strong> {{ report.uss_lmp }} <br>
+            <strong>EDD:</strong> {{ report.edd }} <br>
+            <strong>Fetal Anomalies:</strong> {{ report.fetal_anomalies|title }}
+        </p>
+
+     <!-- Fetal Position Diagram -->
+<h5 class="mt-4">Fetal Position Diagram</h5>
+<div class="text-center mb-4">
+    <div style="max-width:200px; height:200px; margin:auto; position:relative; background:#f8f9fa; border:2px solid #333; border-radius:50%; padding:5px;">
+        
+        <!-- Baby Image -->
+        {% if report.fetal_position %}
+            {% if report.fetal_position == 'cephalic' %}
+                <img src="{% static 'image/cephalic.png' %}" alt="Cephalic Position" 
+                     style="width:60%; position:absolute; top:20%; left:20%; z-index:2;">
+            {% elif report.fetal_position == 'breech' %}
+                <img src="{% static 'image/breech.png' %}" alt="Breech Position" 
+                     style="width:60%; position:absolute; top:20%; left:20%; z-index:2;">
+            {% elif report.fetal_position == 'floating' %}
+                <img src="{% static 'image/transverse.png' %}" alt="Floating / Transverse" 
+                     style="width:60%; position:absolute; top:20%; left:20%; z-index:2;">
+            {% elif report.fetal_position == 'oblique' %}
+                <img src="{% static 'image/oblique.png' %}" alt="Oblique Position" 
+                     style="width:60%; position:absolute; top:20%; left:20%; z-index:2;">
+            {% else %}
+                <p>No fetal image available</p>
+            {% endif %}
+        {% endif %}
+
+        <!-- Placenta -->
+        {% if report.placenta_position %}
+            <div style="width:30%; height:30%; background:rgba(255,0,0,0.5); border-radius:50%; position:absolute;
+                 {% if report.placenta_position == 'anterior' %}
+                     top:60%; left:50%; transform:translateX(-50%);
+                 {% elif report.placenta_position == 'posterior' %}
+                     top:0; left:50%; transform:translateX(-50%);
+                 {% elif report.placenta_position == 'fundal' %}
+                     top:0; left:50%; transform:translateX(-50%);
+                 {% elif report.placenta_position == 'left lateral' %}
+                     top:30%; left:10%;
+                 {% elif report.placenta_position == 'right lateral' %}
+                     top:30%; left:80%;
+                 {% endif %}
+                 z-index:1;">
+            </div>
+        {% endif %}
+    </div>
+
+    <p class="mt-2 fw-bold small">
+        Fetal: {{ report.fetal_position|title }} | Placenta: {{ report.placenta_position|title }}
+    </p>
+</div>
+
+
+        <!-- Remarks -->
+        <h5 class="mt-4">Remarks</h5>
+        <p>{{ report.remarks|linebreaks }}</p>
+
+        <div class="text-end mt-5">
+            <p><strong>Signed:</strong> Signed electronically by Dr. {{ report.doctor.get_full_name }} ✍️</p>
+        </div>
+
+        <p class="mt-4 small text-muted">
+            Please send this report or a photocopy when requesting follow-up scans.  
+            Early scans give more accurate dates than late scans.
+        </p>
+
+        <!-- Print Button -->
+        <div class="text-center mt-4">
+            <button onclick="window.print()" class="btn btn-secondary button">🖨️ Print Report</button>
+        </div>
+    </div>
+</div>
+<script>
+window.onload = function() {
+    window.print();
+    const markPrintedForm = document.getElementById('markPrintedForm');
+    if (markPrintedForm) {
+        markPrintedForm.submit();
+    }
+};
+</script>
+
+{% endblock %}
+
+

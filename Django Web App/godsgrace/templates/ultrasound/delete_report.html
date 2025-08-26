@@ -1,0 +1,24 @@
+{% extends 'ultrasound/base.html' %}
+{% load static %}
+
+{% block title %}Delete Report - {{ report.patient.full_name }}{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="card shadow-lg rounded-4 border border-light p-4" style="max-width:600px; margin:auto; background-color:#fff;">
+        <div class="card-body text-center">
+            <h4 class="mb-4 text-danger">⚠️ Confirm Delete</h4>
+            <p class="mb-4">Are you sure you want to delete the ultrasound report for:</p>
+            <p class="fw-bold">{{ report.patient.full_name }}</p>
+            <p class="text-muted">Report ID: {{ report.report_id }}</p>
+            <p class="text-muted">Scan Date: {{ report.scan_date|date:"d M Y" }}</p>
+
+            <form method="post" class="d-inline">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger me-2">🗑️ Yes, Delete</button>
+                <a href="{% url 'ultrasound:view_report_detail' report.report_id %}" class="btn btn-secondary">❌ Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

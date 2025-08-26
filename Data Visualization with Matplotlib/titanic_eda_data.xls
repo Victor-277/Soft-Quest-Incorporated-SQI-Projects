@@ -1,0 +1,892 @@
+Survived,Pclass,Sex,Age,Embarked,FamilySize,FamilyGroup,FareBand
+No,Third Class,male,22.0,Southampton,2,Small,Low
+Yes,First Class,female,38.0,Cherbourg ,2,Small,Very High
+Yes,Third Class,female,26.0,Southampton,1,Alone,Medium
+Yes,First Class,female,35.0,Southampton,2,Small,Very High
+No,Third Class,male,35.0,Southampton,1,Alone,Medium
+No,Third Class,male,28.0,Queenstown,1,Alone,Medium
+No,First Class,male,54.0,Southampton,1,Alone,Very High
+No,Third Class,male,2.0,Southampton,5,Large,High
+Yes,Third Class,female,27.0,Southampton,3,Small,Medium
+Yes,Second Class,female,14.0,Cherbourg ,2,Small,High
+Yes,Third Class,female,4.0,Southampton,3,Small,High
+Yes,First Class,female,58.0,Southampton,1,Alone,High
+No,Third Class,male,20.0,Southampton,1,Alone,Medium
+No,Third Class,male,39.0,Southampton,7,Large,Very High
+No,Third Class,female,14.0,Southampton,1,Alone,Low
+Yes,Second Class,female,55.0,Southampton,1,Alone,High
+No,Third Class,male,2.0,Queenstown,6,Large,High
+Yes,Second Class,male,28.0,Southampton,1,Alone,Medium
+No,Third Class,female,31.0,Southampton,2,Small,High
+Yes,Third Class,female,28.0,Cherbourg ,1,Alone,Low
+No,Second Class,male,35.0,Southampton,1,Alone,High
+Yes,Second Class,male,34.0,Southampton,1,Alone,Medium
+Yes,Third Class,female,15.0,Queenstown,1,Alone,Medium
+Yes,First Class,male,28.0,Southampton,1,Alone,Very High
+No,Third Class,female,8.0,Southampton,5,Large,High
+Yes,Third Class,female,38.0,Southampton,7,Large,Very High
+No,Third Class,male,28.0,Cherbourg ,1,Alone,Low
+No,First Class,male,19.0,Southampton,6,Large,Very High
+Yes,Third Class,female,28.0,Queenstown,1,Alone,Low
+No,Third Class,male,28.0,Southampton,1,Alone,Low
+No,First Class,male,40.0,Cherbourg ,1,Alone,High
+Yes,First Class,female,28.0,Cherbourg ,2,Small,Very High
+Yes,Third Class,female,28.0,Queenstown,1,Alone,Low
+No,Second Class,male,66.0,Southampton,1,Alone,Medium
+No,First Class,male,28.0,Cherbourg ,2,Small,Very High
+No,First Class,male,42.0,Southampton,2,Small,Very High
+Yes,Third Class,male,28.0,Cherbourg ,1,Alone,Low
+No,Third Class,male,21.0,Southampton,1,Alone,Medium
+No,Third Class,female,18.0,Southampton,3,Small,High
+Yes,Third Class,female,14.0,Cherbourg ,2,Small,Medium
+No,Third Class,female,40.0,Southampton,2,Small,Medium
+No,Second Class,female,27.0,Southampton,2,Small,High
+No,Third Class,male,28.0,Cherbourg ,1,Alone,Low
+Yes,Second Class,female,3.0,Cherbourg ,4,Small,Very High
+Yes,Third Class,female,19.0,Queenstown,1,Alone,Low
+No,Third Class,male,28.0,Southampton,1,Alone,Medium
+No,Third Class,male,28.0,Queenstown,2,Small,High
+Yes,Third Class,female,28.0,Queenstown,1,Alone,Low
+No,Third Class,male,28.0,Cherbourg ,3,Small,High
+No,Third Class,female,18.0,Southampton,2,Small,High
+No,Third Class,male,7.0,Southampton,6,Large,Very High
+No,Third Class,male,21.0,Southampton,1,Alone,Low
+Yes,First Class,female,49.0,Cherbourg ,2,Small,Very High
+Yes,Second Class,female,29.0,Southampton,2,Small,High
+No,First Class,male,65.0,Cherbourg ,2,Small,Very High
+Yes,First Class,male,28.0,Southampton,1,Alone,Very High
+Yes,Second Class,female,21.0,Southampton,1,Alone,Medium
+No,Third Class,male,28.5,Cherbourg ,1,Alone,Low
+Yes,Second Class,female,5.0,Southampton,4,Small,High
+No,Third Class,male,11.0,Southampton,8,Large,Very High
+No,Third Class,male,22.0,Cherbourg ,1,Alone,Low
+Yes,First Class,female,38.0,Southampton,1,Alone,Very High
+No,First Class,male,45.0,Southampton,2,Small,Very High
+No,Third Class,male,4.0,Southampton,6,Large,High
+No,First Class,male,28.0,Cherbourg ,1,Alone,High
+Yes,Third Class,male,28.0,Cherbourg ,3,Small,High
+Yes,Second Class,female,29.0,Southampton,1,Alone,Medium
+No,Third Class,male,19.0,Southampton,1,Alone,Medium
+Yes,Third Class,female,17.0,Southampton,7,Large,Medium
+No,Third Class,male,26.0,Southampton,3,Small,Medium
+No,Second Class,male,32.0,Southampton,1,Alone,Medium
+No,Third Class,female,16.0,Southampton,8,Large,Very High
+No,Second Class,male,21.0,Southampton,1,Alone,Very High
+No,Third Class,male,26.0,Cherbourg ,2,Small,Medium
+Yes,Third Class,male,32.0,Southampton,1,Alone,Very High
+No,Third Class,male,25.0,Southampton,1,Alone,Low
+No,Third Class,male,28.0,Southampton,1,Alone,Low
+No,Third Class,male,28.0,Southampton,1,Alone,Medium
+Yes,Second Class,male,0.83,Southampton,3,Small,High
+Yes,Third Class,female,30.0,Southampton,1,Alone,Medium
+No,Third Class,male,22.0,Southampton,1,Alone,Medium
+Yes,Third Class,male,29.0,Southampton,1,Alone,Medium
+Yes,Third Class,female,28.0,Queenstown,1,Alone,Low
+No,First Class,male,28.0,Southampton,1,Alone,Very High
+Yes,Second Class,female,17.0,Southampton,1,Alone,Medium
+Yes,Third Class,female,33.0,Southampton,4,Small,High
+No,Third Class,male,16.0,Southampton,5,Large,Very High
+No,Third Class,male,28.0,Southampton,1,Alone,Medium
+Yes,First Class,female,23.0,Southampton,6,Large,Very High
+No,Third Class,male,24.0,Southampton,1,Alone,Medium
+No,Third Class,male,29.0,Southampton,1,Alone,Medium
+No,Third Class,male,20.0,Southampton,1,Alone,Low
+No,First Class,male,46.0,Southampton,2,Small,Very High
+No,Third Class,male,26.0,Southampton,4,Small,High
+No,Third Class,male,59.0,Southampton,1,Alone,Low
+No,Third Class,male,28.0,Southampton,1,Alone,Medium
+No,First Class,male,71.0,Cherbourg ,1,Alone,Very High
+Yes,First Class,male,23.0,Cherbourg ,2,Small,Very High
+Yes,Second Class,female,34.0,Southampton,2,Small,High
+No,Second Class,male,34.0,Southampton,2,Small,High
+No,Third Class,female,28.0,Southampton,1,Alone,Low
+No,Third Class,male,28.0,Southampton,1,Alone,Low
+No,First Class,male,21.0,Southampton,2,Small,Very High
+No,Third Class,male,33.0,Southampton,1,Alone,Medium
+No,Third Class,male,37.0,Southampton,3,Small,Medium
+No,Third Class,male,28.0,Southampton,1,Alone,Low
+Yes,Third Class,female,21.0,Southampton,1,Alone,Low
+Yes,Third Class,male,28.0,Southampton,1,Alone,Low
+No,Third Class,male,38.0,Southampton,1,Alone,Low
+Yes,Third Class,female,28.0,Queenstown,2,Small,High
+No,First Class,male,47.0,Southampton,1,Alone,Very High
+No,Third Class,female,14.5,Cherbourg ,2,Small,Medium
+No,Third Class,male,22.0,Southampton,1,Alone,Medium
+No,Third Class,female,20.0,Southampton,2,Small,Medium
+No,Third Class,female,17.0,Cherbourg ,1,Alone,High
+No,Third Class,male,21.0,Southampton,1,Alone,Medium
+No,Third Class,male,70.5,Queenstown,1,Alone,Low
+No,Second Class,male,29.0,Southampton,2,Small,High
+No,First Class,male,24.0,Cherbourg ,2,Small,Very High
+No,Third Class,female,2.0,Southampton,7,Large,Very High
+No,Second Class,male,21.0,Southampton,3,Small,Very High
+No,Third Class,male,28.0,Southampton,1,Alone,Medium
+No,Second Class,male,32.5,Cherbourg ,2,Small,High
+Yes,Second Class,female,32.5,Southampton,1,Alone,Medium
+No,First Class,male,54.0,Southampton,2,Small,Very High
+Yes,Third Class,male,12.0,Cherbourg ,2,Small,Medium
+No,Third Class,male,28.0,Queenstown,1,Alone,Low
+Yes,Third Class,male,24.0,Southampton,1,Alone,Low
+Yes,Third Class,female,28.0,Cherbourg ,3,Small,High
+No,Third Class,male,45.0,Southampton,1,Alone,Low
+No,Third Class,male,33.0,Cherbourg ,1,Alone,Low
+No,Third Class,male,20.0,Southampton,1,Alone,Low
+No,Third Class,female,47.0,Southampton,2,Small,High
+Yes,Second Class,female,29.0,Southampton,2,Small,High
+No,Second Class,male,25.0,Southampton,1,Alone,Medium
+No,Second Class,male,23.0,Cherbourg ,1,Alone,High
+Yes,First Class,female,19.0,Southampton,3,Small,High
+No,First Class,male,37.0,Southampton,2,Small,Very High
+No,Third Class,male,16.0,Southampton,1,Alone,Medium
+No,First Class,male,24.0,Cherbourg ,1,Alone,Very High
+No,Third Class,female,28.0,Cherbourg ,3,Small,High
+Yes,Third Class,female,22.0,Southampton,1,Alone,Low
+Yes,Third Class,female,24.0,Southampton,2,Small,High
+No,Third Class,male,19.0,Queenstown,1,Alone,Low
+No,Second Class,male,18.0,Southampton,1,Alone,Medium
+No,Second Class,male,19.0,Southampton,3,Small,Very High
+Yes,Third Class,male,27.0,Southampton,1,Alone,Low
+No,Third Class,female,9.0,Southampton,5,Large,Very High
+No,Second Class,male,36.5,Southampton,3,Small,High
+No,Second Class,male,42.0,Southampton,1,Alone,Medium
+No,Second Class,male,51.0,Southampton,1,Alone,Medium
+Yes,First Class,female,22.0,Southampton,2,Small,Very High
+No,Third Class,male,55.5,Southampton,1,Alone,Medium
+No,Third Class,male,40.5,Southampton,3,Small,High
+No,Third Class,male,28.0,Southampton,1,Alone,Low
+No,First Class,male,51.0,Cherbourg ,2,Small,Very High
+Yes,Third Class,female,16.0,Queenstown,1,Alone,Low
+No,Third Class,male,30.0,Southampton,1,Alone,Medium
+No,Third Class,male,28.0,Southampton,1,Alone,Medium
+No,Third Class,male,28.0,Southampton,11,Large,Very High
+No,Third Class,male,44.0,Southampton,2,Small,High
+Yes,Second Class,female,40.0,Southampton,1,Alone,High
+No,Third Class,male,26.0,Southampton,1,Alone,Low
+No,Third Class,male,17.0,Southampton,1,Alone,Medium
+No,Third Class,male,1.0,Southampton,6,Large,Very High
+Yes,Third Class,male,9.0,Southampton,3,Small,High
+Yes,First Class,female,28.0,Southampton,2,Small,Very High
+No,Third Class,female,45.0,Southampton,6,Large,High
+No,First Class,male,28.0,Southampton,1,Alone,High
+No,Third Class,male,28.0,Southampton,1,Alone,Very High
+No,First Class,male,61.0,Southampton,1,Alone,Very High
+No,Third Class,male,4.0,Queenstown,6,Large,High
+Yes,Third Class,female,1.0,Southampton,3,Small,Medium
+No,Third Class,male,21.0,Southampton,1,Alone,Medium
+No,First Class,male,56.0,Cherbourg ,1,Alone,High
+No,Third Class,male,18.0,Southampton,3,Small,Low
+No,Third Class,male,28.0,Southampton,5,Large,High
+No,First Class,female,50.0,Cherbourg ,1,Alone,High
+No,Second Class,male,30.0,Southampton,1,Alone,Medium
+No,Third Class,male,36.0,Southampton,1,Alone,Low
+No,Third Class,female,28.0,Southampton,11,Large,Very High
+No,Second Class,male,28.0,Cherbourg ,1,Alone,High
+No,Third Class,male,9.0,Southampton,7,Large,Very High
+Yes,Second Class,male,1.0,Southampton,4,Small,Very High
+Yes,Third Class,female,4.0,Southampton,3,Small,High
+No,First Class,male,28.0,Southampton,1,Alone,Very High
+Yes,Third Class,female,28.0,Queenstown,2,Small,High
+Yes,First Class,male,45.0,Southampton,1,Alone,High
+No,Third Class,male,40.0,Queenstown,3,Small,High
+No,Third Class,male,36.0,Southampton,1,Alone,Low
+Yes,Second Class,female,32.0,Southampton,1,Alone,Medium
+No,Second Class,male,19.0,Southampton,1,Alone,Medium
+Yes,Third Class,female,19.0,Southampton,2,Small,Low
+Yes,Second Class,male,3.0,Southampton,3,Small,High
+Yes,First Class,female,44.0,Cherbourg ,1,Alone,High
+Yes,First Class,female,58.0,Cherbourg ,1,Alone,Very High
+No,Third Class,male,28.0,Queenstown,1,Alone,Low
+No,Third Class,male,42.0,Southampton,2,Small,Medium
+Yes,Third Class,female,28.0,Queenstown,1,Alone,Low
+No,Second Class,female,24.0,Southampton,1,Alone,Medium
+No,Third Class,male,28.0,Southampton,1,Alone,Medium
+No,Third Class,male,28.0,Southampton,11,Large,Very High
+No,Third Class,male,34.0,Southampton,1,Alone,Low
+No,Third Class,male,45.5,Cherbourg ,1,Alone,Low
+Yes,Third Class,male,18.0,Southampton,1,Alone,Medium
+No,Third Class,female,2.0,Southampton,2,Small,Medium
+No,Third Class,male,32.0,Southampton,2,Small,High
+Yes,Third Class,male,26.0,Cherbourg ,1,Alone,High
+Yes,Third Class,female,16.0,Queenstown,1,Alone,Low
+Yes,First Class,male,40.0,Cherbourg ,1,Alone,High
+No,Third Class,male,24.0,Southampton,1,Alone,Low
+Yes,Second Class,female,35.0,Southampton,1,Alone,High
+No,Third Class,male,22.0,Southampton,1,Alone,Low
+No,Second Class,male,30.0,Southampton,1,Alone,Medium
+No,Third Class,male,28.0,Queenstown,2,Small,Low
+Yes,First Class,female,31.0,Cherbourg ,2,Small,Very High
+Yes,Third Class,female,27.0,Southampton,1,Alone,Medium
+No,Second Class,male,42.0,Southampton,2,Small,High
+Yes,First Class,female,32.0,Cherbourg ,1,Alone,Very High
+No,Second Class,male,30.0,Southampton,1,Alone,Medium
+Yes,Third Class,male,16.0,Southampton,1,Alone,Medium
+No,Second Class,male,27.0,Southampton,1,Alone,Medium
+No,Third Class,male,51.0,Southampton,1,Alone,Medium
+No,Third Class,male,28.0,Southampton,1,Alone,Low
+Yes,First Class,male,38.0,Southampton,2,Small,Very High
+No,Third Class,male,22.0,Southampton,1,Alone,Medium
+Yes,Second Class,male,19.0,Southampton,1,Alone,Medium
+No,Third Class,male,20.5,Southampton,1,Alone,Low
+No,Second Class,male,18.0,Southampton,1,Alone,Medium
+No,Third Class,female,28.0,Southampton,5,Large,High
+Yes,First Class,female,35.0,Southampton,2,Small,Very High
+No,Third Class,male,29.0,Southampton,1,Alone,Low
+No,Second Class,male,59.0,Southampton,1,Alone,Medium
+Yes,Third Class,female,5.0,Southampton,7,Large,Very High
+No,Second Class,male,24.0,Southampton,1,Alone,Medium
+No,Third Class,female,28.0,Southampton,1,Alone,Low
+No,Second Class,male,44.0,Southampton,2,Small,High
+Yes,Second Class,female,8.0,Southampton,3,Small,High
+No,Second Class,male,19.0,Southampton,1,Alone,Medium
+No,Second Class,male,33.0,Southampton,1,Alone,Medium
+No,Third Class,female,28.0,Cherbourg ,2,Small,Medium
+Yes,Third Class,female,28.0,Queenstown,2,Small,High
+No,Second Class,male,29.0,Southampton,1,Alone,Medium
+No,Third Class,male,22.0,Southampton,1,Alone,Low
+No,Third Class,male,30.0,Cherbourg ,1,Alone,Low
+No,First Class,male,44.0,Queenstown,3,Small,Very High
+No,Third Class,female,25.0,Southampton,1,Alone,Low
+Yes,Second Class,female,24.0,Southampton,3,Small,High
+Yes,First Class,male,37.0,Southampton,3,Small,Very High
+No,Second Class,male,54.0,Southampton,2,Small,High
+No,Third Class,male,28.0,Southampton,1,Alone,Low
+No,Third Class,female,29.0,Southampton,3,Small,Medium
+No,First Class,male,62.0,Southampton,1,Alone,High
+No,Third Class,male,30.0,Southampton,2,Small,High
+No,Third Class,female,41.0,Southampton,3,Small,High
+Yes,Third Class,female,29.0,Cherbourg ,3,Small,High
+Yes,First Class,female,28.0,Cherbourg ,1,Alone,Very High
+Yes,First Class,female,30.0,Southampton,1,Alone,Very High
+Yes,First Class,female,35.0,Cherbourg ,1,Alone,Very High
+Yes,Second Class,female,50.0,Southampton,2,Small,High
+No,Third Class,male,28.0,Queenstown,1,Alone,Low
+Yes,Third Class,male,3.0,Southampton,7,Large,Very High
+No,First Class,male,52.0,Southampton,3,Small,Very High
+No,First Class,male,40.0,Southampton,1,Alone,Low
+No,Third Class,female,28.0,Queenstown,1,Alone,Low
+No,Second Class,male,36.0,Southampton,1,Alone,Medium
+No,Third Class,male,16.0,Southampton,6,Large,Very High
+Yes,Third Class,male,25.0,Southampton,2,Small,Low
+Yes,First Class,female,58.0,Southampton,2,Small,Very High
+Yes,First Class,female,35.0,Southampton,1,Alone,Very High
+No,First Class,male,28.0,Southampton,1,Alone,High
+Yes,Third Class,male,25.0,Southampton,1,Alone,Low
+Yes,Second Class,female,41.0,Southampton,2,Small,High
+No,First Class,male,37.0,Cherbourg ,2,Small,High
+Yes,Third Class,female,28.0,Queenstown,1,Alone,Low
+Yes,First Class,female,63.0,Southampton,2,Small,Very High
+No,Third Class,female,45.0,Southampton,1,Alone,Low
+No,Second Class,male,28.0,Southampton,1,Alone,Low
+No,Third Class,male,7.0,Queenstown,6,Large,High
+Yes,Third Class,female,35.0,Southampton,3,Small,High
+No,Third Class,male,65.0,Queenstown,1,Alone,Low
+No,Third Class,male,28.0,Southampton,1,Alone,Low
+No,Third Class,male,16.0,Southampton,1,Alone,Medium
+Yes,Third Class,male,19.0,Southampton,1,Alone,Medium
+No,First Class,male,28.0,Southampton,1,Alone,High
+No,Third Class,male,33.0,Cherbourg ,1,Alone,Medium
+Yes,Third Class,male,30.0,Southampton,1,Alone,Medium
+No,Third Class,male,22.0,Southampton,1,Alone,Low
+Yes,Second Class,male,42.0,Southampton,1,Alone,Medium
+Yes,Third Class,female,22.0,Queenstown,1,Alone,Low
+Yes,First Class,female,26.0,Southampton,1,Alone,Very High
+Yes,First Class,female,19.0,Cherbourg ,2,Small,Very High
+No,Second Class,male,36.0,Cherbourg ,1,Alone,Medium
+No,Third Class,female,24.0,Southampton,1,Alone,Medium
+No,Third Class,male,24.0,Southampton,1,Alone,Low
+No,First Class,male,28.0,Cherbourg ,1,Alone,High
+No,Third Class,male,23.5,Cherbourg ,1,Alone,Low
+No,First Class,female,2.0,Southampton,4,Small,Very High
+Yes,First Class,male,28.0,Southampton,1,Alone,High
+Yes,First Class,female,50.0,Cherbourg ,2,Small,Very High
+Yes,Third Class,female,28.0,Queenstown,1,Alone,Low
+Yes,Third Class,male,28.0,Queenstown,3,Small,High
+No,Third Class,male,19.0,Southampton,1,Alone,Low
+Yes,Second Class,female,28.0,Queenstown,1,Alone,Medium
+No,Third Class,male,28.0,Southampton,1,Alone,Medium
+Yes,First Class,male,0.92,Southampton,4,Small,Very High
+Yes,First Class,female,28.0,Cherbourg ,1,Alone,Very High
+Yes,First Class,female,17.0,Cherbourg ,2,Small,Very High
+No,Second Class,male,30.0,Cherbourg ,2,Small,High
+Yes,First Class,female,30.0,Cherbourg ,1,Alone,Very High
+Yes,First Class,female,24.0,Cherbourg ,1,Alone,Very High
+Yes,First Class,female,18.0,Cherbourg ,5,Large,Very High
+No,Second Class,female,26.0,Southampton,3,Small,High
+No,Third Class,male,28.0,Southampton,1,Alone,Low
+No,Second Class,male,43.0,Southampton,3,Small,High
+Yes,Third Class,female,26.0,Southampton,1,Alone,Low
+Yes,Second Class,female,24.0,Southampton,2,Small,High
+No,Second Class,male,54.0,Southampton,1,Alone,Medium
+Yes,First Class,female,31.0,Southampton,3,Small,Very High
+Yes,First Class,female,40.0,Cherbourg ,3,Small,Very High
+No,Third Class,male,22.0,Southampton,1,Alone,Low
+No,Third Class,male,27.0,Southampton,1,Alone,Low
+Yes,Second Class,female,30.0,Queenstown,1,Alone,Medium
+Yes,Second Class,female,22.0,Southampton,3,Small,High
+No,Third Class,male,28.0,Southampton,11,Large,Very High
+Yes,First Class,female,36.0,Cherbourg ,1,Alone,Very High
+No,Third Class,male,61.0,Southampton,1,Alone,Low
+Yes,Second Class,female,36.0,Southampton,1,Alone,Medium
+Yes,Third Class,female,31.0,Southampton,3,Small,High
+Yes,First Class,female,16.0,Cherbourg ,2,Small,Very High
+Yes,Third Class,female,28.0,Queenstown,3,Small,High
+No,First Class,male,45.5,Southampton,1,Alone,High
+No,First Class,male,38.0,Southampton,2,Small,Very High
+No,Third Class,male,16.0,Southampton,3,Small,High
+Yes,First Class,female,28.0,Southampton,2,Small,Very High
+No,Third Class,male,28.0,Southampton,1,Alone,Low
+No,First Class,male,29.0,Southampton,2,Small,Very High
+Yes,First Class,female,41.0,Cherbourg ,1,Alone,Very High
+Yes,Third Class,male,45.0,Southampton,1,Alone,Medium
+No,First Class,male,45.0,Southampton,1,Alone,Very High
+Yes,Second Class,male,2.0,Southampton,3,Small,High
+Yes,First Class,female,24.0,Southampton,6,Large,Very High
+No,Second Class,male,28.0,Southampton,1,Alone,Medium
+No,Second Class,male,25.0,Southampton,1,Alone,Medium
+No,Second Class,male,36.0,Southampton,1,Alone,Medium
+Yes,Second Class,female,24.0,Southampton,1,Alone,Medium
+Yes,Second Class,female,40.0,Southampton,1,Alone,Medium
+Yes,Third Class,female,28.0,Southampton,2,Small,High
+Yes,Third Class,male,3.0,Southampton,3,Small,High
+No,Third Class,male,42.0,Southampton,1,Alone,Medium
+No,Third Class,male,23.0,Southampton,1,Alone,Medium
+No,First Class,male,28.0,Southampton,1,Alone,Very High
+No,Third Class,male,15.0,Cherbourg ,3,Small,Low
+No,Third Class,male,25.0,Southampton,2,Small,High
+No,Third Class,male,28.0,Cherbourg ,1,Alone,Low
+No,Third Class,male,28.0,Southampton,1,Alone,Medium
+Yes,First Class,female,22.0,Southampton,2,Small,Very High
+No,Second Class,female,38.0,Southampton,1,Alone,Medium
+Yes,Third Class,female,28.0,Queenstown,1,Alone,Low
+Yes,Third Class,female,28.0,Queenstown,1,Alone,Low
+No,Third Class,male,40.0,Southampton,6,Large,High
+No,Second Class,male,29.0,Cherbourg ,2,Small,High
+No,Third Class,female,45.0,Cherbourg ,2,Small,Medium
+No,Third Class,male,35.0,Southampton,1,Alone,Low
+No,Third Class,male,28.0,Queenstown,2,Small,High
+No,Third Class,male,30.0,Southampton,1,Alone,Low
+Yes,First Class,female,60.0,Cherbourg ,2,Small,Very High
+Yes,Third Class,female,28.0,Cherbourg ,1,Alone,Low
+Yes,Third Class,female,28.0,Queenstown,1,Alone,Low
+Yes,First Class,female,24.0,Cherbourg ,1,Alone,Very High
+Yes,First Class,male,25.0,Cherbourg ,2,Small,Very High
+No,Third Class,male,18.0,Southampton,2,Small,Low
+No,Third Class,male,19.0,Southampton,1,Alone,Medium
+No,First Class,male,22.0,Cherbourg ,1,Alone,Very High
+No,Third Class,female,3.0,Southampton,5,Large,High
+Yes,First Class,female,28.0,Cherbourg ,2,Small,Very High
+Yes,Third Class,female,22.0,Southampton,1,Alone,Low
+No,First Class,male,27.0,Cherbourg ,3,Small,Very High
+No,Third Class,male,20.0,Cherbourg ,1,Alone,Low
+No,Third Class,male,19.0,Southampton,1,Alone,Low
+Yes,First Class,female,42.0,Cherbourg ,1,Alone,Very High
+Yes,Third Class,female,1.0,Cherbourg ,3,Small,High
+No,Third Class,male,32.0,Southampton,1,Alone,Medium
+Yes,First Class,female,35.0,Southampton,2,Small,Very High
+No,Third Class,male,28.0,Southampton,1,Alone,Low
+No,Second Class,male,18.0,Southampton,1,Alone,Very High
+No,Third Class,male,1.0,Southampton,8,Large,Very High
+Yes,Second Class,female,36.0,Southampton,1,Alone,Medium
+No,Third Class,male,28.0,Queenstown,1,Alone,Low
+Yes,Second Class,female,17.0,Cherbourg ,1,Alone,Medium
+Yes,First Class,male,36.0,Southampton,4,Small,Very High
+Yes,Third Class,male,21.0,Southampton,1,Alone,Low
+No,Third Class,male,28.0,Southampton,3,Small,Medium
+Yes,First Class,female,23.0,Cherbourg ,2,Small,Very High
+Yes,Third Class,female,24.0,Southampton,3,Small,High
+No,Third Class,male,22.0,Southampton,1,Alone,Low
+No,Third Class,female,31.0,Southampton,1,Alone,Low
+No,Second Class,male,46.0,Southampton,1,Alone,High
+No,Second Class,male,23.0,Southampton,1,Alone,Medium
+Yes,Second Class,female,28.0,Southampton,1,Alone,Medium
+Yes,Third Class,male,39.0,Southampton,1,Alone,Medium
+No,Third Class,male,26.0,Southampton,1,Alone,Medium
+No,Third Class,female,21.0,Southampton,2,Small,Medium
+No,Third Class,male,28.0,Southampton,2,Small,High
+No,Third Class,female,20.0,Southampton,1,Alone,Medium
+No,Second Class,male,34.0,Southampton,2,Small,High
+No,Third Class,male,51.0,Southampton,1,Alone,Low
+Yes,Second Class,male,3.0,Southampton,3,Small,High
+No,Third Class,male,21.0,Southampton,1,Alone,Low
+No,Third Class,female,28.0,Southampton,5,Large,High
+No,Third Class,male,28.0,Southampton,1,Alone,Low
+No,Third Class,male,28.0,Queenstown,1,Alone,Low
+Yes,First Class,female,33.0,Queenstown,2,Small,Very High
+No,Second Class,male,28.0,Southampton,1,Alone,Low
+Yes,Third Class,male,44.0,Southampton,1,Alone,Medium
+No,Third Class,female,28.0,Southampton,1,Alone,Medium
+Yes,Second Class,female,34.0,Southampton,3,Small,Very High
+Yes,Second Class,female,18.0,Southampton,3,Small,Medium
+No,Second Class,male,30.0,Southampton,1,Alone,Medium
+No,Third Class,female,10.0,Southampton,3,Small,High
+No,Third Class,male,28.0,Cherbourg ,1,Alone,Low
+No,Third Class,male,21.0,Queenstown,1,Alone,Low
+No,Third Class,male,29.0,Southampton,1,Alone,Low
+No,Third Class,female,28.0,Southampton,3,Small,Medium
+No,Third Class,male,18.0,Southampton,3,Small,High
+No,Third Class,male,28.0,Southampton,1,Alone,Low
+Yes,Second Class,female,28.0,Southampton,2,Small,High
+Yes,Second Class,female,19.0,Southampton,1,Alone,High
+No,Third Class,male,28.0,Queenstown,1,Alone,Low
+Yes,Third Class,male,32.0,Southampton,1,Alone,Medium
+Yes,First Class,male,28.0,Southampton,1,Alone,High
+Yes,Third Class,female,28.0,Southampton,2,Small,High
+Yes,Second Class,female,42.0,Southampton,2,Small,High
+No,Third Class,male,17.0,Southampton,1,Alone,Low
+No,First Class,male,50.0,Southampton,2,Small,Very High
+Yes,First Class,female,14.0,Southampton,4,Small,Very High
+No,Third Class,female,21.0,Southampton,5,Large,Very High
+Yes,Second Class,female,24.0,Southampton,6,Large,High
+No,First Class,male,64.0,Southampton,6,Large,Very High
+No,Second Class,male,31.0,Southampton,1,Alone,Medium
+Yes,Second Class,female,45.0,Southampton,3,Small,High
+No,Third Class,male,20.0,Southampton,1,Alone,Medium
+No,Third Class,male,25.0,Southampton,2,Small,Low
+Yes,Second Class,female,28.0,Southampton,1,Alone,Medium
+Yes,Third Class,male,28.0,Southampton,1,Alone,Medium
+Yes,First Class,male,4.0,Southampton,3,Small,Very High
+Yes,Second Class,female,13.0,Southampton,2,Small,High
+Yes,First Class,male,34.0,Southampton,1,Alone,High
+Yes,Third Class,female,5.0,Cherbourg ,4,Small,High
+Yes,First Class,male,52.0,Southampton,1,Alone,High
+No,Second Class,male,36.0,Southampton,4,Small,High
+No,Third Class,male,28.0,Southampton,2,Small,High
+No,First Class,male,30.0,Cherbourg ,1,Alone,High
+Yes,First Class,male,49.0,Cherbourg ,2,Small,Very High
+No,Third Class,male,28.0,Southampton,1,Alone,Medium
+Yes,Third Class,male,29.0,Cherbourg ,1,Alone,Low
+No,First Class,male,65.0,Southampton,1,Alone,High
+Yes,First Class,female,28.0,Southampton,2,Small,Very High
+Yes,Second Class,female,50.0,Southampton,1,Alone,Medium
+No,Third Class,male,28.0,Queenstown,1,Alone,Low
+Yes,First Class,male,48.0,Southampton,1,Alone,High
+No,Third Class,male,34.0,Southampton,1,Alone,Medium
+No,First Class,male,47.0,Southampton,1,Alone,Very High
+No,Second Class,male,48.0,Southampton,1,Alone,Medium
+No,Third Class,male,28.0,Southampton,1,Alone,Medium
+No,Third Class,male,38.0,Southampton,1,Alone,Low
+No,Second Class,male,28.0,Southampton,1,Alone,Low
+No,First Class,male,56.0,Southampton,1,Alone,High
+No,Third Class,male,28.0,Queenstown,1,Alone,Low
+Yes,Third Class,female,0.75,Cherbourg ,4,Small,High
+No,Third Class,male,28.0,Southampton,1,Alone,Low
+No,Third Class,male,38.0,Southampton,1,Alone,Medium
+Yes,Second Class,female,33.0,Southampton,4,Small,High
+Yes,Second Class,female,23.0,Cherbourg ,1,Alone,Medium
+No,Third Class,female,22.0,Southampton,1,Alone,Medium
+No,First Class,male,28.0,Southampton,1,Alone,Very High
+No,Second Class,male,34.0,Southampton,2,Small,High
+No,Third Class,male,29.0,Southampton,2,Small,Low
+No,Third Class,male,22.0,Southampton,1,Alone,Low
+Yes,Third Class,female,2.0,Southampton,2,Small,Medium
+No,Third Class,male,9.0,Southampton,8,Large,Very High
+No,Second Class,male,28.0,Southampton,1,Alone,Low
+No,Third Class,male,50.0,Southampton,1,Alone,Medium
+Yes,Third Class,female,63.0,Southampton,1,Alone,Medium
+Yes,First Class,male,25.0,Cherbourg ,2,Small,Very High
+No,Third Class,female,28.0,Southampton,5,Large,High
+Yes,First Class,female,35.0,Southampton,2,Small,Very High
+No,First Class,male,58.0,Cherbourg ,1,Alone,High
+No,Third Class,male,30.0,Southampton,1,Alone,Medium
+Yes,Third Class,male,9.0,Southampton,3,Small,High
+No,Third Class,male,28.0,Southampton,2,Small,High
+No,Third Class,male,21.0,Southampton,1,Alone,Low
+No,First Class,male,55.0,Southampton,1,Alone,High
+No,First Class,male,71.0,Cherbourg ,1,Alone,Very High
+No,Third Class,male,21.0,Southampton,1,Alone,Medium
+No,Third Class,male,28.0,Cherbourg ,1,Alone,High
+Yes,First Class,female,54.0,Cherbourg ,2,Small,Very High
+No,Third Class,male,28.0,Southampton,1,Alone,High
+No,First Class,female,25.0,Southampton,4,Small,Very High
+No,Third Class,male,24.0,Southampton,1,Alone,Low
+No,Third Class,male,17.0,Southampton,1,Alone,Medium
+No,Third Class,female,21.0,Queenstown,1,Alone,Low
+No,Third Class,female,28.0,Queenstown,1,Alone,Low
+No,Third Class,female,37.0,Southampton,1,Alone,Medium
+Yes,First Class,female,16.0,Southampton,1,Alone,Very High
+No,First Class,male,18.0,Cherbourg ,2,Small,Very High
+Yes,Second Class,female,33.0,Southampton,3,Small,High
+Yes,First Class,male,28.0,Southampton,1,Alone,High
+No,Third Class,male,28.0,Southampton,1,Alone,High
+Yes,Third Class,male,26.0,Southampton,1,Alone,Very High
+Yes,Third Class,male,29.0,Queenstown,1,Alone,Low
+No,Third Class,male,28.0,Southampton,1,Alone,Medium
+Yes,First Class,male,36.0,Southampton,1,Alone,High
+Yes,First Class,female,54.0,Cherbourg ,2,Small,Very High
+No,Third Class,male,24.0,Southampton,1,Alone,Low
+No,First Class,male,47.0,Southampton,1,Alone,Very High
+Yes,Second Class,female,34.0,Southampton,1,Alone,Medium
+No,Third Class,male,28.0,Queenstown,1,Alone,High
+Yes,Second Class,female,36.0,Southampton,2,Small,High
+No,Third Class,male,32.0,Southampton,1,Alone,Low
+Yes,First Class,female,30.0,Southampton,1,Alone,Very High
+No,Third Class,male,22.0,Southampton,1,Alone,Low
+No,Third Class,male,28.0,Cherbourg ,1,Alone,Low
+Yes,First Class,female,44.0,Cherbourg ,2,Small,Very High
+No,Third Class,male,28.0,Cherbourg ,1,Alone,Low
+No,Third Class,male,40.5,Queenstown,1,Alone,Low
+Yes,Second Class,female,50.0,Southampton,1,Alone,Medium
+No,First Class,male,28.0,Southampton,1,Alone,Very High
+No,Third Class,male,39.0,Southampton,1,Alone,Medium
+No,Second Class,male,23.0,Southampton,4,Small,Medium
+Yes,Second Class,female,2.0,Southampton,3,Small,High
+No,Third Class,male,28.0,Cherbourg ,1,Alone,Low
+No,Third Class,male,17.0,Cherbourg ,3,Small,Low
+Yes,Third Class,female,28.0,Cherbourg ,3,Small,High
+No,Third Class,female,30.0,Southampton,1,Alone,Medium
+Yes,Second Class,female,7.0,Southampton,3,Small,High
+No,First Class,male,45.0,Southampton,1,Alone,High
+Yes,First Class,female,30.0,Cherbourg ,1,Alone,Very High
+No,Third Class,male,28.0,Southampton,1,Alone,High
+Yes,First Class,female,22.0,Cherbourg ,3,Small,Very High
+Yes,First Class,female,36.0,Southampton,3,Small,Very High
+No,Third Class,female,9.0,Southampton,7,Large,Very High
+No,Third Class,female,11.0,Southampton,7,Large,Very High
+Yes,Second Class,male,32.0,Southampton,2,Small,High
+No,First Class,male,50.0,Cherbourg ,2,Small,Very High
+No,First Class,male,64.0,Southampton,1,Alone,High
+Yes,Second Class,female,19.0,Southampton,2,Small,High
+Yes,Second Class,male,28.0,Cherbourg ,1,Alone,Medium
+No,Third Class,male,33.0,Southampton,3,Small,High
+Yes,Second Class,male,8.0,Southampton,3,Small,Very High
+Yes,First Class,male,17.0,Cherbourg ,3,Small,Very High
+No,Second Class,male,27.0,Southampton,1,Alone,High
+No,Third Class,male,28.0,Queenstown,1,Alone,Low
+Yes,Third Class,male,22.0,Cherbourg ,1,Alone,Low
+Yes,Third Class,female,22.0,Southampton,1,Alone,Low
+No,First Class,male,62.0,Southampton,1,Alone,High
+Yes,First Class,female,48.0,Cherbourg ,2,Small,Very High
+No,First Class,male,28.0,Cherbourg ,1,Alone,Very High
+Yes,First Class,female,39.0,Southampton,3,Small,Very High
+Yes,Third Class,female,36.0,Southampton,2,Small,High
+No,Third Class,male,28.0,Queenstown,1,Alone,Low
+No,Third Class,male,40.0,Southampton,1,Alone,Low
+No,Second Class,male,28.0,Southampton,1,Alone,Medium
+No,Third Class,male,28.0,Southampton,1,Alone,Medium
+No,Third Class,female,28.0,Southampton,1,Alone,Medium
+No,Third Class,male,24.0,Southampton,3,Small,High
+No,Third Class,male,19.0,Southampton,1,Alone,Low
+No,Third Class,female,29.0,Southampton,5,Large,High
+No,Third Class,male,28.0,Cherbourg ,1,Alone,Low
+Yes,Third Class,male,32.0,Southampton,1,Alone,Low
+Yes,Second Class,male,62.0,Southampton,1,Alone,Medium
+Yes,First Class,female,53.0,Southampton,3,Small,Very High
+Yes,First Class,male,36.0,Southampton,1,Alone,High
+Yes,Third Class,female,28.0,Queenstown,1,Alone,Low
+No,Third Class,male,16.0,Southampton,1,Alone,Medium
+No,Third Class,male,19.0,Southampton,1,Alone,High
+Yes,Second Class,female,34.0,Southampton,1,Alone,Medium
+Yes,First Class,female,39.0,Southampton,2,Small,Very High
+No,Third Class,female,28.0,Cherbourg ,2,Small,High
+Yes,Third Class,male,32.0,Southampton,1,Alone,Medium
+Yes,Second Class,female,25.0,Southampton,3,Small,High
+Yes,First Class,female,39.0,Cherbourg ,3,Small,Very High
+No,Second Class,male,54.0,Southampton,1,Alone,High
+No,First Class,male,36.0,Cherbourg ,1,Alone,Very High
+No,Third Class,male,28.0,Cherbourg ,1,Alone,Medium
+Yes,First Class,female,18.0,Southampton,3,Small,Very High
+No,Second Class,male,47.0,Southampton,1,Alone,High
+Yes,First Class,male,60.0,Cherbourg ,3,Small,Very High
+No,Third Class,male,22.0,Southampton,1,Alone,Medium
+No,Third Class,male,28.0,Southampton,1,Alone,Medium
+No,Third Class,male,35.0,Southampton,1,Alone,Low
+Yes,First Class,female,52.0,Cherbourg ,2,Small,Very High
+No,Third Class,male,47.0,Southampton,1,Alone,Low
+No,Third Class,female,28.0,Queenstown,3,Small,Low
+No,Second Class,male,37.0,Southampton,2,Small,High
+No,Third Class,male,36.0,Southampton,3,Small,High
+Yes,Second Class,female,28.0,Southampton,1,Alone,Very High
+No,Third Class,male,49.0,Southampton,1,Alone,Low
+No,Third Class,male,28.0,Cherbourg ,1,Alone,Low
+Yes,First Class,male,49.0,Cherbourg ,2,Small,Very High
+Yes,Second Class,female,24.0,Southampton,4,Small,High
+No,Third Class,male,28.0,Southampton,1,Alone,Low
+No,First Class,male,28.0,Southampton,1,Alone,Very High
+No,Third Class,male,44.0,Southampton,1,Alone,Medium
+Yes,First Class,male,35.0,Cherbourg ,1,Alone,High
+No,Third Class,male,36.0,Southampton,2,Small,High
+No,Third Class,male,30.0,Southampton,1,Alone,Low
+Yes,First Class,male,27.0,Southampton,1,Alone,High
+Yes,Second Class,female,22.0,Cherbourg ,4,Small,Very High
+Yes,First Class,female,40.0,Southampton,1,Alone,Very High
+No,Third Class,female,39.0,Southampton,7,Large,Very High
+No,Third Class,male,28.0,Southampton,1,Alone,Low
+Yes,Third Class,female,28.0,Queenstown,2,Small,High
+No,Third Class,male,28.0,Queenstown,1,Alone,Low
+No,Third Class,male,35.0,Southampton,1,Alone,Medium
+Yes,Second Class,female,24.0,Southampton,4,Small,Very High
+No,Third Class,male,34.0,Southampton,3,Small,Medium
+No,Third Class,female,26.0,Southampton,2,Small,High
+Yes,Second Class,female,4.0,Southampton,4,Small,Very High
+No,Second Class,male,26.0,Southampton,1,Alone,Medium
+No,Third Class,male,27.0,Cherbourg ,2,Small,Medium
+Yes,First Class,male,42.0,Southampton,2,Small,Very High
+Yes,Third Class,male,20.0,Cherbourg ,3,Small,High
+No,Third Class,male,21.0,Southampton,1,Alone,Low
+No,Third Class,male,21.0,Southampton,1,Alone,High
+No,First Class,male,61.0,Southampton,1,Alone,Very High
+No,Second Class,male,57.0,Queenstown,1,Alone,Medium
+Yes,First Class,female,21.0,Southampton,1,Alone,Very High
+No,Third Class,male,26.0,Southampton,1,Alone,Low
+No,Third Class,male,28.0,Queenstown,1,Alone,Low
+Yes,First Class,male,80.0,Southampton,1,Alone,High
+No,Third Class,male,51.0,Southampton,1,Alone,Low
+Yes,First Class,male,32.0,Cherbourg ,1,Alone,High
+No,First Class,male,28.0,Southampton,1,Alone,Low
+No,Third Class,female,9.0,Southampton,6,Large,High
+Yes,Second Class,female,28.0,Southampton,1,Alone,Medium
+No,Third Class,male,32.0,Southampton,1,Alone,Medium
+No,Second Class,male,31.0,Southampton,3,Small,High
+No,Third Class,female,41.0,Southampton,6,Large,Very High
+No,Third Class,male,28.0,Southampton,2,Small,High
+No,Third Class,male,20.0,Southampton,1,Alone,Low
+Yes,First Class,female,24.0,Cherbourg ,1,Alone,Very High
+No,Third Class,female,2.0,Southampton,6,Large,High
+Yes,Third Class,male,28.0,Southampton,1,Alone,Very High
+Yes,Third Class,female,0.75,Cherbourg ,4,Small,High
+Yes,First Class,male,48.0,Cherbourg ,2,Small,Very High
+No,Third Class,male,19.0,Southampton,1,Alone,Low
+Yes,First Class,male,56.0,Cherbourg ,1,Alone,Very High
+No,Third Class,male,28.0,Southampton,1,Alone,Low
+Yes,Third Class,female,23.0,Southampton,1,Alone,Low
+No,Third Class,male,28.0,Southampton,1,Alone,Low
+Yes,Second Class,female,18.0,Southampton,2,Small,High
+No,Third Class,male,21.0,Southampton,1,Alone,Medium
+Yes,Third Class,female,28.0,Queenstown,1,Alone,Low
+No,Third Class,female,18.0,Queenstown,1,Alone,Low
+No,Second Class,male,24.0,Southampton,3,Small,Very High
+No,Third Class,male,28.0,Southampton,1,Alone,Low
+No,Third Class,female,32.0,Queenstown,3,Small,High
+No,Second Class,male,23.0,Southampton,1,Alone,Medium
+No,First Class,male,58.0,Cherbourg ,3,Small,Very High
+Yes,First Class,male,50.0,Southampton,3,Small,Very High
+No,Third Class,male,40.0,Cherbourg ,1,Alone,Low
+No,First Class,male,47.0,Southampton,1,Alone,High
+No,Third Class,male,36.0,Southampton,1,Alone,Low
+Yes,Third Class,male,20.0,Southampton,2,Small,Medium
+No,Second Class,male,32.0,Southampton,3,Small,Very High
+No,Second Class,male,25.0,Southampton,1,Alone,Medium
+No,Third Class,male,28.0,Southampton,1,Alone,Low
+No,Third Class,male,43.0,Southampton,1,Alone,Medium
+Yes,First Class,female,28.0,Southampton,2,Small,Very High
+Yes,Second Class,female,40.0,Southampton,3,Small,Very High
+No,First Class,male,31.0,Southampton,2,Small,Very High
+No,Second Class,male,70.0,Southampton,1,Alone,Medium
+Yes,Second Class,male,31.0,Southampton,1,Alone,Medium
+No,Second Class,male,28.0,Southampton,1,Alone,Low
+No,Third Class,male,18.0,Southampton,1,Alone,Low
+No,Third Class,male,24.5,Southampton,1,Alone,Medium
+Yes,Third Class,female,18.0,Southampton,1,Alone,Medium
+No,Third Class,female,43.0,Southampton,8,Large,Very High
+Yes,First Class,male,36.0,Cherbourg ,2,Small,Very High
+No,Third Class,female,28.0,Queenstown,1,Alone,Medium
+Yes,First Class,male,27.0,Cherbourg ,1,Alone,Very High
+No,Third Class,male,20.0,Southampton,1,Alone,Medium
+No,Third Class,male,14.0,Southampton,8,Large,Very High
+No,Second Class,male,60.0,Southampton,3,Small,Very High
+No,Second Class,male,25.0,Cherbourg ,4,Small,Very High
+No,Third Class,male,14.0,Southampton,6,Large,Very High
+No,Third Class,male,19.0,Southampton,1,Alone,Medium
+No,Third Class,male,18.0,Southampton,1,Alone,Low
+Yes,First Class,female,15.0,Southampton,2,Small,Very High
+Yes,First Class,male,31.0,Southampton,2,Small,Very High
+Yes,Third Class,female,4.0,Cherbourg ,2,Small,Medium
+Yes,Third Class,male,28.0,Southampton,1,Alone,Very High
+No,Third Class,male,25.0,Cherbourg ,1,Alone,Low
+No,First Class,male,60.0,Southampton,1,Alone,High
+No,Second Class,male,52.0,Southampton,1,Alone,Medium
+No,Third Class,male,44.0,Southampton,1,Alone,Medium
+Yes,Third Class,female,28.0,Queenstown,1,Alone,Low
+No,First Class,male,49.0,Cherbourg ,3,Small,Very High
+No,Third Class,male,42.0,Southampton,1,Alone,Low
+Yes,First Class,female,18.0,Cherbourg ,2,Small,Very High
+Yes,First Class,male,35.0,Southampton,1,Alone,High
+No,Third Class,female,18.0,Cherbourg ,2,Small,Medium
+No,Third Class,male,25.0,Queenstown,1,Alone,Low
+No,Third Class,male,26.0,Southampton,2,Small,Low
+No,Second Class,male,39.0,Southampton,1,Alone,High
+Yes,Second Class,female,45.0,Southampton,1,Alone,Medium
+Yes,First Class,male,42.0,Southampton,1,Alone,High
+Yes,First Class,female,22.0,Southampton,1,Alone,Very High
+Yes,Third Class,male,28.0,Cherbourg ,3,Small,High
+Yes,First Class,female,24.0,Cherbourg ,1,Alone,Very High
+No,First Class,male,28.0,Southampton,1,Alone,High
+Yes,First Class,male,48.0,Southampton,2,Small,Very High
+No,Third Class,male,29.0,Southampton,1,Alone,Medium
+No,Second Class,male,52.0,Southampton,1,Alone,Medium
+No,Third Class,male,19.0,Southampton,1,Alone,Low
+Yes,First Class,female,38.0,Cherbourg ,1,Alone,Very High
+Yes,Second Class,female,27.0,Southampton,1,Alone,Medium
+No,Third Class,male,28.0,Queenstown,1,Alone,High
+No,Third Class,male,33.0,Southampton,1,Alone,Low
+Yes,Second Class,female,6.0,Southampton,2,Small,Very High
+No,Third Class,male,17.0,Southampton,2,Small,Low
+No,Second Class,male,34.0,Southampton,1,Alone,Medium
+No,Second Class,male,50.0,Southampton,1,Alone,Medium
+Yes,First Class,male,27.0,Southampton,2,Small,Very High
+No,Third Class,male,20.0,Southampton,1,Alone,Medium
+Yes,Second Class,female,30.0,Southampton,4,Small,High
+Yes,Third Class,female,28.0,Queenstown,1,Alone,Low
+No,Second Class,male,25.0,Southampton,2,Small,High
+No,Third Class,female,25.0,Southampton,2,Small,Medium
+Yes,First Class,female,29.0,Southampton,1,Alone,Very High
+No,Third Class,male,11.0,Cherbourg ,1,Alone,High
+No,Second Class,male,28.0,Southampton,1,Alone,Low
+No,Second Class,male,23.0,Southampton,1,Alone,Medium
+No,Second Class,male,23.0,Southampton,1,Alone,Medium
+No,Third Class,male,28.5,Southampton,1,Alone,High
+No,Third Class,female,48.0,Southampton,5,Large,Very High
+Yes,First Class,male,35.0,Cherbourg ,1,Alone,Very High
+No,Third Class,male,28.0,Southampton,1,Alone,Low
+No,Third Class,male,28.0,Southampton,1,Alone,Low
+Yes,First Class,male,28.0,Southampton,1,Alone,High
+No,First Class,male,36.0,Southampton,2,Small,Very High
+Yes,First Class,female,21.0,Cherbourg ,5,Large,Very High
+No,Third Class,male,24.0,Southampton,2,Small,High
+Yes,Third Class,male,31.0,Southampton,1,Alone,Medium
+No,First Class,male,70.0,Southampton,3,Small,Very High
+No,Third Class,male,16.0,Southampton,3,Small,High
+Yes,Second Class,female,30.0,Southampton,1,Alone,Medium
+No,First Class,male,19.0,Southampton,2,Small,Very High
+No,Third Class,male,31.0,Queenstown,1,Alone,Low
+Yes,Second Class,female,4.0,Southampton,3,Small,High
+Yes,Third Class,male,6.0,Southampton,2,Small,Medium
+No,Third Class,male,33.0,Southampton,1,Alone,Medium
+No,Third Class,male,23.0,Southampton,1,Alone,Low
+Yes,Second Class,female,48.0,Southampton,4,Small,Very High
+Yes,Second Class,male,0.67,Southampton,3,Small,High
+No,Third Class,male,28.0,Southampton,1,Alone,Low
+No,Second Class,male,18.0,Southampton,1,Alone,Medium
+No,Third Class,male,34.0,Southampton,1,Alone,Medium
+Yes,First Class,female,33.0,Southampton,1,Alone,Very High
+No,Third Class,male,28.0,Southampton,1,Alone,High
+No,Third Class,male,41.0,Southampton,1,Alone,Low
+Yes,Third Class,male,20.0,Cherbourg ,1,Alone,Low
+Yes,First Class,female,36.0,Southampton,4,Small,Very High
+No,Third Class,male,16.0,Southampton,1,Alone,Low
+Yes,First Class,female,51.0,Southampton,2,Small,Very High
+No,First Class,male,28.0,Cherbourg ,1,Alone,Very High
+No,Third Class,female,30.5,Queenstown,1,Alone,Low
+No,Third Class,male,28.0,Queenstown,2,Small,High
+No,Third Class,male,32.0,Southampton,1,Alone,Medium
+No,Third Class,male,24.0,Southampton,1,Alone,Medium
+No,Third Class,male,48.0,Southampton,1,Alone,Low
+No,Second Class,female,57.0,Southampton,1,Alone,Medium
+No,Third Class,male,28.0,Cherbourg ,1,Alone,Low
+Yes,Second Class,female,54.0,Southampton,5,Large,High
+No,Third Class,male,18.0,Southampton,1,Alone,Low
+No,Third Class,male,28.0,Queenstown,1,Alone,Low
+Yes,Third Class,female,5.0,Southampton,1,Alone,Medium
+No,Third Class,male,28.0,Queenstown,1,Alone,Low
+Yes,First Class,female,43.0,Southampton,2,Small,Very High
+Yes,Third Class,female,13.0,Cherbourg ,1,Alone,Low
+Yes,First Class,female,17.0,Southampton,2,Small,Very High
+No,First Class,male,29.0,Southampton,1,Alone,High
+No,Third Class,male,28.0,Southampton,4,Small,High
+No,Third Class,male,25.0,Southampton,1,Alone,Low
+No,Third Class,male,25.0,Southampton,1,Alone,Low
+Yes,Third Class,female,18.0,Southampton,1,Alone,Low
+No,Third Class,male,8.0,Queenstown,6,Large,High
+Yes,Third Class,male,1.0,Southampton,4,Small,High
+No,First Class,male,46.0,Cherbourg ,1,Alone,Very High
+No,Third Class,male,28.0,Queenstown,1,Alone,Low
+No,Second Class,male,16.0,Southampton,1,Alone,High
+No,Third Class,female,28.0,Southampton,11,Large,Very High
+No,First Class,male,28.0,Cherbourg ,1,Alone,High
+No,Third Class,male,25.0,Southampton,1,Alone,Low
+No,Second Class,male,39.0,Southampton,1,Alone,Medium
+Yes,First Class,female,49.0,Southampton,1,Alone,High
+Yes,Third Class,female,31.0,Southampton,1,Alone,Medium
+No,Third Class,male,30.0,Cherbourg ,1,Alone,Low
+No,Third Class,female,30.0,Southampton,3,Small,High
+No,Second Class,male,34.0,Southampton,1,Alone,Medium
+Yes,Second Class,female,31.0,Southampton,3,Small,High
+Yes,First Class,male,11.0,Southampton,4,Small,Very High
+Yes,Third Class,male,0.42,Cherbourg ,2,Small,Medium
+Yes,Third Class,male,27.0,Southampton,1,Alone,Low
+No,Third Class,male,31.0,Southampton,1,Alone,Low
+No,First Class,male,39.0,Southampton,1,Alone,Low
+No,Third Class,female,18.0,Southampton,1,Alone,Low
+No,Second Class,male,39.0,Southampton,1,Alone,Medium
+Yes,First Class,female,33.0,Southampton,2,Small,Very High
+No,Third Class,male,26.0,Southampton,1,Alone,Low
+No,Third Class,male,39.0,Southampton,1,Alone,High
+No,Second Class,male,35.0,Southampton,1,Alone,Medium
+No,Third Class,female,6.0,Southampton,7,Large,Very High
+No,Third Class,male,30.5,Southampton,1,Alone,Medium
+No,First Class,male,28.0,Southampton,1,Alone,Low
+No,Third Class,female,23.0,Southampton,1,Alone,Medium
+No,Second Class,male,31.0,Cherbourg ,3,Small,Very High
+No,Third Class,male,43.0,Southampton,1,Alone,Low
+No,Third Class,male,10.0,Southampton,6,Large,High
+Yes,First Class,female,52.0,Southampton,3,Small,Very High
+Yes,Third Class,male,27.0,Southampton,1,Alone,Medium
+No,First Class,male,38.0,Southampton,1,Alone,Low
+Yes,Third Class,female,27.0,Southampton,2,Small,Medium
+No,Third Class,male,2.0,Southampton,6,Large,Very High
+No,Third Class,male,28.0,Queenstown,1,Alone,Low
+No,Third Class,male,28.0,Southampton,1,Alone,Very High
+Yes,Second Class,male,1.0,Cherbourg ,3,Small,Very High
+Yes,Third Class,male,28.0,Queenstown,1,Alone,Low
+Yes,First Class,female,62.0,Southampton,1,Alone,Very High
+Yes,Third Class,female,15.0,Cherbourg ,2,Small,Medium
+Yes,Second Class,male,0.83,Southampton,3,Small,High
+No,Third Class,male,28.0,Cherbourg ,1,Alone,Low
+No,Third Class,male,23.0,Southampton,1,Alone,Low
+No,Third Class,male,18.0,Southampton,1,Alone,Medium
+Yes,First Class,female,39.0,Cherbourg ,3,Small,Very High
+No,Third Class,male,21.0,Southampton,1,Alone,Medium
+No,Third Class,male,28.0,Southampton,1,Alone,Medium
+Yes,Third Class,male,32.0,Southampton,1,Alone,Very High
+Yes,First Class,male,28.0,Cherbourg ,1,Alone,High
+No,Third Class,male,20.0,Southampton,1,Alone,Medium
+No,Second Class,male,16.0,Southampton,1,Alone,Medium
+Yes,First Class,female,30.0,Cherbourg ,1,Alone,High
+No,Third Class,male,34.5,Cherbourg ,1,Alone,Low
+No,Third Class,male,17.0,Southampton,1,Alone,Medium
+No,Third Class,male,42.0,Southampton,1,Alone,Low
+No,Third Class,male,28.0,Southampton,11,Large,Very High
+No,Third Class,male,35.0,Cherbourg ,1,Alone,Low
+No,Second Class,male,28.0,Southampton,2,Small,Very High
+Yes,First Class,female,28.0,Cherbourg ,2,Small,Very High
+No,Third Class,male,4.0,Southampton,7,Large,Very High
+No,Third Class,male,74.0,Southampton,1,Alone,Low
+No,Third Class,female,9.0,Cherbourg ,3,Small,High
+Yes,First Class,female,16.0,Southampton,2,Small,Very High
+No,Second Class,female,44.0,Southampton,2,Small,High
+Yes,Third Class,female,18.0,Southampton,2,Small,Medium
+Yes,First Class,female,45.0,Southampton,3,Small,Very High
+Yes,First Class,male,51.0,Southampton,1,Alone,High
+Yes,Third Class,female,24.0,Cherbourg ,4,Small,High
+No,Third Class,male,28.0,Cherbourg ,1,Alone,Low
+No,Third Class,male,41.0,Southampton,3,Small,Medium
+No,Second Class,male,21.0,Southampton,2,Small,Medium
+Yes,First Class,female,48.0,Southampton,1,Alone,High
+No,Third Class,female,28.0,Southampton,11,Large,Very High
+No,Second Class,male,24.0,Southampton,1,Alone,Medium
+Yes,Second Class,female,42.0,Southampton,1,Alone,Medium
+Yes,Second Class,female,27.0,Cherbourg ,2,Small,Medium
+No,First Class,male,31.0,Southampton,1,Alone,Very High
+No,Third Class,male,28.0,Southampton,1,Alone,Medium
+Yes,Third Class,male,4.0,Southampton,3,Small,Medium
+No,Third Class,male,26.0,Southampton,1,Alone,Low
+Yes,First Class,female,47.0,Southampton,3,Small,Very High
+No,First Class,male,33.0,Southampton,1,Alone,Low
+No,Third Class,male,47.0,Southampton,1,Alone,Medium
+Yes,Second Class,female,28.0,Cherbourg ,2,Small,High
+Yes,Third Class,female,15.0,Cherbourg ,1,Alone,Low
+No,Third Class,male,20.0,Southampton,1,Alone,Medium
+No,Third Class,male,19.0,Southampton,1,Alone,Low
+No,Third Class,male,28.0,Southampton,1,Alone,Low
+Yes,First Class,female,56.0,Cherbourg ,2,Small,Very High
+Yes,Second Class,female,25.0,Southampton,2,Small,High
+No,Third Class,male,33.0,Southampton,1,Alone,Low
+No,Third Class,female,22.0,Southampton,1,Alone,Medium
+No,Second Class,male,28.0,Southampton,1,Alone,Medium
+No,Third Class,male,25.0,Southampton,1,Alone,Low
+No,Third Class,female,39.0,Queenstown,6,Large,High
+No,Second Class,male,27.0,Southampton,1,Alone,Medium
+Yes,First Class,female,19.0,Southampton,1,Alone,High
+No,Third Class,female,28.0,Southampton,4,Small,High
+Yes,First Class,male,26.0,Cherbourg ,1,Alone,High
+No,Third Class,male,32.0,Queenstown,1,Alone,Low

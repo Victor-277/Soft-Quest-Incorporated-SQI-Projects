@@ -1,0 +1,88 @@
+{% extends 'ultrasound/base.html' %}
+{% load static %}
+{% block title %}Home - God's Grace Ultrasound{% endblock %}
+{% block content %}
+<!-- Top row: 4 cards -->
+<div class="row g-4 mb-4">
+    <div class="col-md-6 col-lg-3">
+        <div class="stats-box">
+            <div class="icon-circle bg-primary mb-2">
+                <span class="text-white">🤰</span>
+            </div>
+            <h6>Pregnant Patients</h6>
+            <h2>{{ total_patients|default:"0" }}</h2>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+        <div class="stats-box">
+            <div class="icon-circle bg-success mb-2">
+                <span class="text-white">🔍</span>
+            </div>
+            <h6>Scans Today</h6>
+            <h2>{{ today_reports|default:"0" }}</h2>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+        <div class="stats-box">
+            <div class="icon-circle bg-warning mb-2">
+                <span class="text-white">👥</span>
+            </div>
+            <h6>Total Patients</h6>
+            <h2>{{ total_patients|default:"0" }}</h2>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+        <div class="stats-box">
+            <div class="icon-circle bg-danger mb-2">
+                <span class="text-white">⏳</span>
+            </div>
+            <h6>Pending Reports</h6>
+            <h2>{{ pending_reports|default:"0" }}</h2>
+        </div>
+    </div>
+</div>
+
+<!-- Middle row: 2 cards -->
+<div class="row g-4 mb-4">
+    <div class="col-md-6">
+        <div class="card-custom">
+            <h5 class="text-muted">Today's Appointments</h5>
+            <h3>{{ upcoming_appointments|default:"0" }}</h3>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card-custom">
+            <h5 class="text-muted">New Reports</h5>
+            <h3>{{ today_reports|default:"0" }}</h3>
+        </div>
+    </div>
+</div>
+
+<!-- Bottom row: 1 full width card -->
+<div class="row g-4">
+    <div class="col-12">
+        <div class="card-custom">
+            <h5 class="text-muted">Follow-up Visits</h5>
+            <h3>{{ follow_up_visits|default:"0" }}</h3>
+        </div>
+    </div>
+</div>
+
+<!-- Welcome Section for Non-authenticated Users -->
+{% if not user.is_authenticated %}
+<div class="row mt-5">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body text-center">
+                <h3 class="card-title">Welcome to God's Grace Ultrasound</h3>
+                <p class="card-text">Professional ultrasound diagnostic services with care and compassion.</p>
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="{% url 'ultrasound:login' %}" class="btn btn-primary">Login</a>
+                      </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock %}
+

@@ -1,0 +1,52 @@
+ *{
+    padding: 0;
+    margin: 0; 
+    font-family: 'Crimson Text', serif;
+   }
+ .nav-link:hover{
+    transition: all 0.2s;
+    border-bottom: 2px solid brown;
+    color: brown;
+ }
+ .nav-link:hover{
+   transition: all 0.2s;
+   border-bottom: 2px solid brown;
+   color: brown;
+}
+ .vot{
+    background-color: #FFF9F2;
+    width: 100%;
+ }
+ .TOT{
+   border-bottom:3px brown solid;
+   border-top:3px brown solid ;
+   border-right:3px brown solid;
+   border-radius:15px;
+ }
+ .TAT{
+   border-top:3px brown solid ;
+   border-right:3px brown solid;
+   border-radius:15px;
+ } 
+.tut{
+  border: 1px solid rgb(223, 220, 220);
+  border-radius: 10px;
+}
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active:hover {
+  background-color: #ced2ce;
+  color: white;
+}
+ 
+ 

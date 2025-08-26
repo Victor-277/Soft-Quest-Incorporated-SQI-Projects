@@ -1,0 +1,496 @@
+{% extends 'ultrasound/base.html' %}
+{% load static %}
+
+{% block title %}Add Report | God's Grace Ultrasound{% endblock %}
+
+{% block content %}
+<div class="container my-5 report-form">
+    <h2 class="text-center clinic-name">
+        GOD'S GRACE ULTRASOUND DIAGNOSTIC SERVICE
+    </h2>
+    <p class="text-center">OJU ODO LAGBONDOKO AGUNPOPO ROAD, OYO</p>
+    {% if form.errors %}
+    <div class="alert alert-danger">
+        {{ form.errors }}
+    </div>
+    {% endif %}
+    <form method="post">
+        {% csrf_token %}
+
+        <div class="row mb-3">
+            <div class="col-md-4">
+                <label class="form-label">Patient</label>
+                <input type="text" class="form-control" value="{{ patient.full_name }}" readonly>
+                <input type="hidden" name="patient" value="{{ patient.id }}">
+            </div>
+
+            <div class="col-md-4">
+                <label for="doctorInput" class="form-label">Doctor</label>
+                <input id="doctorInput" type="text" class="form-control" value="{{ user.get_full_name }}" readonly>
+                <input type="hidden" name="doctor" value="{{ user.id }}">
+
+
+            </div>
+            <div class="col-md-4">
+                <label for="hospitalInput" class="form-label">Hospital</label>
+                <input id="hospitalInput" type="text" class="form-control" value="God's Grace Ultrasound" readonly>
+                <input type="hidden" name="hospital" value="God's Grace Ultrasound">
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-4">
+                <label for="{{ form.indication.id_for_label }}" class="form-label">Indication</label>
+                <input id="IndicationInput" type="text" class="form-control" value="F W B & G A" readonly>
+                <input type="hidden" name="indication" value="F W B & G A">
+            </div>
+            <div class="col-md-4">
+                <label for="{{ form.scan_date.id_for_label }}" class="form-label">Scan Date</label>
+                {{ form.scan_date }}
+                {% if form.scan_date.errors %}
+                    <div class="text-danger small mt-1">{{ form.scan_date.errors.0 }}</div>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col">
+                <label class="form-label">Pregnancy Type</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="pregnancy_type" id="singleton" value="singleton"
+                           {% if form.pregnancy_type.value == 'singleton' %}checked{% endif %}>
+                    <label class="form-check-label" for="singleton">Singleton</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="pregnancy_type" id="twins" value="twins"
+                           {% if form.pregnancy_type.value == 'twins' %}checked{% endif %}>
+                    <label class="form-check-label" for="twins">Twins</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="pregnancy_type" id="triplets" value="triplets"
+                           {% if form.pregnancy_type.value == 'triplets' %}checked{% endif %}>
+                    <label class="form-check-label" for="triplets">Triplets</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col">
+                <label class="form-label">Scan Type</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="scan_type" id="longitudinal" value="longitudinal"
+                           {% if form.scan_type.value == 'longitudinal' %}checked{% endif %}>
+                    <label class="form-check-label" for="longitudinal">Longitudinal</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="scan_type" id="transverse" value="transverse"
+                           {% if form.scan_type.value == 'transverse' %}checked{% endif %}>
+                    <label class="form-check-label" for="transverse">Transverse</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="scan_type" id="oblique" value="oblique"
+                           {% if form.scan_type.value == 'oblique' %}checked{% endif %}>
+                    <label class="form-check-label" for="oblique">Oblique</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col">
+                <label class="form-label">Fetal Position</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="fetal_position" id="cephalic" value="cephalic"
+                           {% if form.fetal_position.value == 'cephalic' %}checked{% endif %}>
+                    <label class="form-check-label" for="cephalic">Cephalic</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="fetal_position" id="breech" value="breech"
+                           {% if form.fetal_position.value == 'breech' %}checked{% endif %}>
+                    <label class="form-check-label" for="breech">Breech</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="fetal_position" id="floating" value="floating"
+                           {% if form.fetal_position.value == 'floating' %}checked{% endif %}>
+                    <label class="form-check-label" for="floating">Floating</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col">
+                <label class="form-label">Fetal Status</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="fetal_status" id="live" value="live"
+                           {% if form.fetal_status.value == 'live' %}checked{% endif %}>
+                    <label class="form-check-label" for="live">Live</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="fetal_status" id="notLive" value="not_live"
+                           {% if form.fetal_status.value == 'not_live' %}checked{% endif %}>
+                    <label class="form-check-label" for="notLive">Not Live</label>
+                </div>
+            </div>
+        </div>
+
+        <h5 class="section-title">Fetal Measurements</h5>
+        <div class="row mb-3">
+            <div class="col-md-4">
+                <label for="{{ form.bdp.id_for_label }}" class="form-label">BDP</label>
+                {{ form.bdp }}
+                {% if form.bdp.errors %}
+                    <div class="text-danger small mt-1">{{ form.bdp.errors.0 }}</div>
+                {% endif %}
+            </div>
+            <div class="col-md-4">
+                <label for="{{ form.crl.id_for_label }}" class="form-label">CRL</label>
+                {{ form.crl }}
+                {% if form.crl.errors %}
+                    <div class="text-danger small mt-1">{{ form.crl.errors.0 }}</div>
+                {% endif %}
+            </div>
+            <div class="col-md-4">
+                <label for="{{ form.fl.id_for_label }}" class="form-label">FL</label>
+                {{ form.fl }}
+                {% if form.fl.errors %}
+                    <div class="text-danger small mt-1">{{ form.fl.errors.0 }}</div>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-4">
+                <label for="{{ form.hc.id_for_label }}" class="form-label">HC</label>
+                {{ form.hc }}
+                {% if form.hc.errors %}
+                    <div class="text-danger small mt-1">{{ form.hc.errors.0 }}</div>
+                {% endif %}
+            </div>
+            <div class="col-md-4">
+                <label for="{{ form.ac.id_for_label }}" class="form-label">AC</label>
+                {{ form.ac }}
+                {% if form.ac.errors %}
+                    <div class="text-danger small mt-1">{{ form.ac.errors.0 }}</div>
+                {% endif %}
+            </div>
+            <div class="col-md-4">
+                <label for="{{ form.suspected_sex.id_for_label }}" class="form-label">Suspected Sex</label>
+                {{ form.suspected_sex }}
+                {% if form.suspected_sex.errors %}
+                    <div class="text-danger small mt-1">{{ form.suspected_sex.errors.0 }}</div>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="{{ form.average_fetal_age.id_for_label }}" class="form-label">Average Fetal Age</label>
+            {{ form.average_fetal_age }}
+            {% if form.average_fetal_age.errors %}
+                <div class="text-danger small mt-1">{{ form.average_fetal_age.errors.0 }}</div>
+            {% endif %}
+        </div>
+
+        <h5 class="section-title">Placenta</h5>
+        <div class="row mb-3">
+            <div class="col">
+                <label class="form-label">Placenta Position</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="placenta_position" id="anterior" value="anterior"
+                           {% if form.placenta_position.value == 'anterior' %}checked{% endif %}>
+                    <label class="form-check-label" for="anterior">Anterior</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="placenta_position" id="posterior" value="posterior"
+                           {% if form.placenta_position.value == 'posterior' %}checked{% endif %}>
+                    <label class="form-check-label" for="posterior">Posterior</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="placenta_position" id="fundal" value="fundal"
+                           {% if form.placenta_position.value == 'fundal' %}checked{% endif %}>
+                    <label class="form-check-label" for="fundal">Fundal</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="placenta_position" id="leftLateral" value="left_lateral"
+                           {% if form.placenta_position.value == 'left_lateral' %}checked{% endif %}>
+                    <label class="form-check-label" for="leftLateral">Left Lateral</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="placenta_position" id="rightLateral" value="right_lateral"
+                           {% if form.placenta_position.value == 'right_lateral' %}checked{% endif %}>
+                    <label class="form-check-label" for="rightLateral">Right Lateral</label>
+                </div>
+                <br><label class="form-label mt-2">Placenta Maturity</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="placenta_maturity" id="mature" value="mature"
+                           {% if form.placenta_maturity.value == 'mature' %}checked{% endif %}>
+                    <label class="form-check-label" for="mature">Mature</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="placenta_maturity" id="immature" value="immature"
+                           {% if form.placenta_maturity.value == 'immature' %}checked{% endif %}>
+                    <label class="form-check-label" for="immature">Immature</label>
+                </div>
+            </div>
+        </div>
+
+        <h5 class="section-title">Cervix & Liquor</h5>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label for="{{ form.distance_from_cervix.id_for_label }}" class="form-label">Distance from Cervix</label>
+                {{ form.distance_from_cervix }}
+                {% if form.distance_from_cervix.errors %}
+                    <div class="text-danger small mt-1">{{ form.distance_from_cervix.errors.0 }}</div>
+                {% endif %}
+            </div>
+            <div class="col-md-6">
+                <label for="{{ form.pravaria.id_for_label }}" class="form-label">Pravaria</label>
+                {{ form.pravaria }}
+                {% if form.pravaria.errors %}
+                    <div class="text-danger small mt-1">{{ form.pravaria.errors.0 }}</div>
+                {% endif %}
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Cervical OS</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="cervical_os" id="closed" value="closed"
+                           {% if form.cervical_os.value == 'closed' %}checked{% endif %}>
+                    <label class="form-check-label" for="closed">Closed</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="cervical_os" id="open" value="open"
+                           {% if form.cervical_os.value == 'open' %}checked{% endif %}>
+                    <label class="form-check-label" for="open">Open</label>
+                </div>
+                <input id="cervicalOS" type="text" class="form-control mt-2" name="cervical_os_measurement" 
+                       placeholder="mm" value="{{ form.cervical_os_measurement.value|default:'' }}">
+            </div>
+            <div class="col-md-6">
+                <label for="{{ form.intact_cervix_length.id_for_label }}" class="form-label">Intact Cervix Length</label>
+                {{ form.intact_cervix_length }}
+                {% if form.intact_cervix_length.errors %}
+                    <div class="text-danger small mt-1">{{ form.intact_cervix_length.errors.0 }}</div>
+                {% endif %}
+            </div>
+        </div>
+
+        <h5 class="section-title">Liquor & EFW</h5>
+        <div class="mb-3">
+            <label class="form-label">Liquor Volume</label><br>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="liquor_volume" id="liquorAdequate" value="adequate"
+                       {% if form.liquor_volume.value == 'adequate' %}checked{% endif %}>
+                <label class="form-check-label" for="liquorAdequate">Adequate</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="liquor_volume" id="liquorIncreased" value="increased"
+                       {% if form.liquor_volume.value == 'increased' %}checked{% endif %}>
+                <label class="form-check-label" for="liquorIncreased">Increased</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="liquor_volume" id="liquorReduced" value="reduced"
+                       {% if form.liquor_volume.value == 'reduced' %}checked{% endif %}>
+                <label class="form-check-label" for="liquorReduced">Reduced</label>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label for="{{ form.afi.id_for_label }}" class="form-label">AFI (Automatic Fluid Index)(Four quadrant index)</label>
+                {{ form.afi }}
+                {% if form.afi.errors %}
+                    <div class="text-danger small mt-1">{{ form.afi.errors.0 }}</div>
+                {% endif %}
+            </div>
+            <div class="col-md-6">
+                <label for="{{ form.efw.id_for_label }}" class="form-label">EFW (Estimated Fetal Weight)</label>
+                {{ form.efw }}
+                {% if form.efw.errors %}
+                    <div class="text-danger small mt-1">{{ form.efw.errors.0 }}</div>
+                {% endif %}
+            </div>
+        </div>
+
+        <h5 class="section-title">Dates & Anomalies</h5>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label for="{{ form.uss_lmp.id_for_label }}" class="form-label">USS LMP</label>
+                {{ form.uss_lmp }}
+                {% if form.uss_lmp.errors %}
+                    <div class="text-danger small mt-1">{{ form.uss_lmp.errors.0 }}</div>
+                {% endif %}
+            </div>
+            <div class="col-md-6">
+                <label for="{{ form.edd.id_for_label }}" class="form-label">EDD</label>
+                {{ form.edd }}
+                {% if form.edd.errors %}
+                    <div class="text-danger small mt-1">{{ form.edd.errors.0 }}</div>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Fetal Anomalies</label><br>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="fetal_anomalies" id="nilObvious" value="nil_obvious"
+                       {% if form.fetal_anomalies.value == 'nil_obvious' %}checked{% endif %}>
+                <label class="form-check-label" for="nilObvious">Nil Obvious</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="fetal_anomalies" id="specific" value="specific"
+                       {% if form.fetal_anomalies.value == 'specific' %}checked{% endif %}>
+                <label class="form-check-label" for="specific">Specific</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="fetal_anomalies" id="normal" value="normal"
+                       {% if form.fetal_anomalies.value == 'normal' %}checked{% endif %}>
+                <label class="form-check-label" for="normal">Normal</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="fetal_anomalies" id="abnormal" value="abnormal"
+                       {% if form.fetal_anomalies.value == 'abnormal' %}checked{% endif %}>
+                <label class="form-check-label" for="abnormal">Abnormal</label>
+            </div>
+        </div>
+
+            <h5 class="section-title">Remarks</h5>
+        <div class="mb-3">
+            <label for="{{ form.remarks.id_for_label }}" class="form-label">Remarks</label>
+            {{ form.remarks }}
+            {% if form.remarks.errors %}
+                <div class="text-danger small mt-1">{{ form.remarks.errors.0 }}</div>
+            {% endif %}
+        </div>
+        
+<form class="container mt-4">
+
+  <div class="row g-4">
+    <!-- Fetal Diagram -->
+    <div class="col-12 col-lg-6 text-center">
+      <div class="fetal-diagram-container mx-auto">
+        <div style="max-width:200px; height:200px; margin:auto; position:relative; background:#f8f9fa; border:2px solid #333; border-radius:50%; padding:5px;">
+          
+          <!-- Baby Image (only one img, source will change dynamically) -->
+          <img id="fetusImage" 
+               src="{% static 'image/cephalic.png' %}" 
+               alt="Fetus"
+               style="width:60%; height:auto; position:absolute; top:20%; left:20%; z-index:2;">
+
+          <!-- Placenta -->
+          <div id="placenta"
+               style="width:30%; height:30%; background:rgba(255,0,0,0.5); border-radius:50%; position:absolute; top:10%; left:50%; transform:translateX(-50%); z-index:1;">
+          </div>
+        </div> 
+
+        <p id="fetusLabel" class="mt-2 fw-bold small">Fetal Position: Cephalic</p>
+
+        <!-- Buttons -->
+        <div class="d-flex flex-wrap justify-content-center gap-2 mt-2">
+          <!-- Fetal Positions -->
+          <div class="d-flex flex-wrap gap-1">
+            <button type="button" class="btn btn-sm btn-outline-primary" onclick="setFetalPosition('cephalic')">Cephalic</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="setFetalPosition('breech')">Breech</button>
+            <button type="button" class="btn btn-sm btn-outline-success" onclick="setFetalPosition('floating')">Floating</button>
+            <button type="button" class="btn btn-sm btn-outline-dark" onclick="setFetalPosition('oblique')">Oblique</button>
+          </div>
+
+          <!-- Placenta Positions -->
+          <div class="d-flex flex-wrap gap-1">
+            <button type="button" class="btn btn-sm btn-outline-primary" onclick="setPlacenta('anterior')">Anterior</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="setPlacenta('posterior')">Posterior</button>
+            <button type="button" class="btn btn-sm btn-outline-success" onclick="setPlacenta('fundal')">Fundal</button>
+            <button type="button" class="btn btn-sm btn-outline-warning" onclick="setPlacenta('leftLateral')">Left Lateral</button>
+            <button type="button" class="btn btn-sm btn-outline-info" onclick="setPlacenta('rightLateral')">Right Lateral</button>
+          </div> 
+        </div>
+      </div>
+    </div>
+
+    <!-- Signature & Date -->
+    <div class="col-12 col-lg-6">
+      <div class="row g-3">
+        <div class="col-12">
+          <label for="signature" class="form-label">Signature:</label>
+           <input id="signature" type="text" 
+           class="form-control" 
+           value="Signed electronically by {{ user.get_full_name }} ✍️" 
+           readonly>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notes -->
+  <p class="mt-4 small text-muted">
+    Please send this report or a photocopy when requesting follow-up scans.  
+    Early scans give more accurate dates than late scans.
+  </p>
+
+  <!-- Submit -->
+  <div class="mt-3 text-center">
+    <button type="submit" class="btn btn-primary px-4">Submit Report</button>
+  </div>
+
+</form>
+
+
+<script>
+function setFetalPosition(position) {
+    const fetus = document.getElementById('fetusImage');
+    const label = document.getElementById('fetusLabel');
+
+    // Change image based on fetal position
+    switch(position) {
+        case 'cephalic':
+            fetus.src = "{% static 'image/cephalic.png' %}";
+            label.textContent = 'Fetal Position: Cephalic (Head Down)';
+            break;
+        case 'breech':
+            fetus.src = "{% static 'image/breech.png' %}";
+            label.textContent = 'Fetal Position: Breech (Head Up)';
+            break;
+        case 'floating':
+            fetus.src = "{% static 'image/transverse.png' %}";
+            label.textContent = 'Fetal Position: Floating / Transverse';
+            break;
+        case 'oblique':
+            fetus.src = "{% static 'image/oblique.png' %}";
+            label.textContent = 'Fetal Position: Oblique';
+            break;
+    }
+}
+
+// Placenta position logic
+function setPlacenta(position) {
+    const placenta = document.getElementById('placenta');
+
+    // Reset
+    placenta.style.top = '10%';
+    placenta.style.left = '50%';
+    placenta.style.transform = 'translateX(-50%)';
+
+    switch(position) {
+        case 'anterior':
+            placenta.style.top = '60%';
+            placenta.style.left = '50%';
+            break;
+        case 'posterior':
+            placenta.style.top = '10%';
+            placenta.style.left = '50%';
+            break;
+        case 'fundal':
+            placenta.style.top = '0%';
+            placenta.style.left = '50%';
+            break;
+        case 'leftLateral':
+            placenta.style.top = '30%';
+            placenta.style.left = '20%';
+            break;
+        case 'rightLateral':
+            placenta.style.top = '30%';
+            placenta.style.left = '80%';
+            break;
+    }
+}
+</script>
+
+{% endblock %}
+

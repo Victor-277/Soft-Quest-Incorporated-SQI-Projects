@@ -1,0 +1,169 @@
+{% extends 'ultrasound/base.html' %}
+{% load static %}
+
+{% block title %}Doctor Dashboard - Dr. God's Grace Ultrasound{% endblock %}
+
+{% block content %}
+<h2 class="mb-4" style="color:#004085;">Doctor Dashboard</h2>
+
+<div class="row g-4">
+    <!-- Today's Appointments -->
+    <div class="col-md-4">
+        <div class="card-custom h-100 d-flex flex-column justify-content-between" style="background: linear-gradient(135deg, #28a745, #85d17f); color: #fff;">
+            <div>
+                <h3>Today's Appointments</h3>
+                <p>Total: <strong>{{ today_appointments }}</strong></p>
+            </div>
+            <a href="{% url 'ultrasound:my_appointments' %}" class="btn btn-light mt-3 align-self-start" style="color:#070b56;">View All</a>
+        </div>
+    </div>
+
+    <!-- Today's Reports -->
+    <div class="col-md-4">
+        <div class="card-custom h-100 d-flex flex-column justify-content-between" style="background: linear-gradient(135deg, #17a2b8, #63c7d7); color: #fff;">
+            <div>
+                <h3>Today's Reports</h3>
+                <p>Total: <strong>{{ today_reports }}</strong></p>
+            </div>
+            <a href="{% url 'ultrasound:view_reports' %}" class="btn btn-light mt-3 align-self-start" style="color:#070b56;">View Reports</a>
+        </div>
+    </div>
+
+    <!-- Total Reports -->
+    <div class="col-md-4">
+        <div class="card-custom h-100 d-flex flex-column justify-content-between" style="background: linear-gradient(135deg, #ffc107, #ffdd57); color: #3a2e00;">
+            <div>
+                <h3>Total Reports</h3>
+                <p>Total: <strong>{{ total_reports }}</strong></p>
+            </div>
+            <a href="{% url 'ultrasound:view_reports' %}" class="btn btn-dark mt-3 align-self-start">View All</a>
+        </div>
+    </div>
+</div>
+
+<!-- Today's Appointments List -->
+{% if today_appointments_list %}
+<div class="row mt-5">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">Today's Appointments</h5>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Patient</th>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Reason</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for appointment in today_appointments_list %}
+                            <tr>
+                            <td>
+                               <a href="{% url 'ultrasound:add_report' %}?patient_id={{ appointment.patient.id }}">
+                                   {{ appointment.patient.full_name }}
+                               </a>
+                           </td>
+                           <td>{{ appointment.appointment_date|date:"M j, Y" }}</td>
+                           <td>{{ appointment.appointment_time|time:"g:i A" }}</td>
+                           <td>{{ appointment.reason|truncatechars:50 }}</td>
+                           <td>
+                               <span class="badge bg-{% if appointment.status == 'confirmed' %}success{% elif appointment.status == 'scheduled' %}warning{% else %}secondary{% endif %}">
+                                   {{ appointment.get_status_display }}
+                               </span>
+                           </td>
+                        </tr>
+                        {% endfor %}
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+<!-- Recent Reports -->
+{% if recent_reports %}
+<div class="row mt-4" id="recentReportsSection">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Recent Reports</h5>
+                <!-- Print Button -->
+                <button onclick="printRecentReports()" class="btn btn-sm btn-secondary">🖨️ Print Reports</button>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover table-bordered text-center align-middle">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Scan Date</th>
+                                <th>Report ID</th>
+                                <th>Patient</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for report in recent_reports %}
+                            <tr>
+                                <td>{{ report.scan_date|date:"M j, Y" }}</td>
+                                <td>{{ report.report_id|truncatechars:8 }}</td>
+                                <td>{{ report.patient.full_name }}</td>
+                                <td>
+                                    <a href="{% url 'ultrasound:view_report_detail' report.report_id %}" class="btn btn-sm btn-outline-primary">View</a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function printRecentReports() {
+    const printContents = document.getElementById('recentReportsSection').innerHTML;
+    const originalContents = document.body.innerHTML;
+
+    document.body.innerHTML = printContents;
+    window.print();
+    document.body.innerHTML = originalContents;
+}
+</script>
+
+<style>
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #recentReportsSection, #recentReportsSection * {
+        visibility: visible;
+    }
+    #recentReportsSection {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+    .btn {
+        display: none; /* hide buttons when printing */
+    }
+}
+</style>
+{% endif %}
+
+{% endblock %}
+
+
+
+
+

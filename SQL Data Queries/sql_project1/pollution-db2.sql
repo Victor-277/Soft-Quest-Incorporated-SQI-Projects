@@ -1,0 +1,46 @@
+CREATE DATABASE pollution_db2; 
+USE pollution_db2;
+CREATE TABLE location (
+    locationID INT PRIMARY KEY AUTO_INCREMENT,
+    SiteID INT NOT NULL,
+    Location VARCHAR(255) NOT NULL,
+    geo_point_2d VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE instrument (
+    instrumentID INT PRIMARY KEY AUTO_INCREMENT,
+    InstrumentType VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE measurement (
+    measurementID INT PRIMARY KEY AUTO_INCREMENT,
+    locationID INT NOT NULL,
+    instrumentID INT NOT NULL,
+    DateTime DATETIME NOT NULL,
+    Location VARCHAR(255) NOT NULL,
+    NOx DECIMAL(12,6),
+    NO2 DECIMAL(12,6),
+    NO DECIMAL(12,6),
+    PM2_5 DECIMAL(12,6),
+    VPM2_5 DECIMAL(12,6),
+     PM10 DECIMAL(12,6),
+	NVPM10	DECIMAL(12,6),
+	VPM10	DECIMAL(12,6),
+	NVPM2_5	DECIMAL(12,6),
+	CO	VARCHAR(255) NULL,
+	O3	VARCHAR(255) NULL,
+	SO2	VARCHAR(255) NULL,
+	Temperature	 VARCHAR(255) NULL,
+	RH VARCHAR(255) NULL,
+	Air_Pressure VARCHAR(255) NULL,
+    FOREIGN KEY (locationID) REFERENCES location(locationID),
+    FOREIGN KEY (instrumentID) REFERENCES instrument(instrumentID)
+);
+CREATE TABLE monitoring (
+    monitoringID INT PRIMARY KEY AUTO_INCREMENT,
+    locationID INT NOT NULL,
+    DateStart VARCHAR(255) NULL,
+    DateEnd VARCHAR(255) NULL,
+    Current BOOLEAN NOT NULL,
+    FOREIGN KEY (locationID) REFERENCES location(locationID)
+);

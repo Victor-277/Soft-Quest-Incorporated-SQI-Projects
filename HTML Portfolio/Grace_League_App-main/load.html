@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>leagues - Grace League App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #070b56;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .league-item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .league-item h3 {
+            margin: 0;
+        }
+        .league-item .actions {
+            display: flex;
+            gap: 10px;
+        }
+        .actions button {
+            padding: 8px 16px;
+            border: none;
+            background-color: #070b56;
+            color: white;
+            cursor: pointer;
+            border-radius: 3px;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+        .actions button:hover {
+            background-color: #0f126b;
+        }
+        .actions button:active {
+            background-color: #04093c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>My Leagues</h2>
+ 
+        <div class="league-item">
+            <h3>Premier League</h3>
+            <div class="actions">
+            <button onclick="window.location.href='manage-league.html'">Manage </button>
+            <button>Delete</button>
+            </div>
+        </div>
+
+        <div class="league-item">
+            <h3>La Liga</h3>
+            <div class="actions">
+                <button onclick="window.location.href='manage-league.html'">Manage </button>
+                <button>Delete</button>
+            </div>
+        </div>
+
+        <div class="league-item">
+            <h3>Italian Serie A</h3>
+            <div class="actions">
+                <button onclick="window.location.href='manage-league.html'">Manage </button>
+                <button>Delete</button>
+            </div>
+        </div>
+
+        <div class="league-item">
+            <h3>ROSHN SAUDI PRO LEAGUE</h3>
+            <div class="actions">
+                <button onclick="window.location.href='manage-league.html'">Manage </button>
+                <button>Delete</button>
+            </div>
+        </div>
+
+        <div class="league-item">
+            <h3>Bundesliga</h3>
+            <div class="actions">
+                <button onclick="window.location.href='manage-league.html'">Manage </button>
+                <button>Delete</button>
+            </div>
+        </div>
+
+       
+        
+    </div>
+</body>
+</html>

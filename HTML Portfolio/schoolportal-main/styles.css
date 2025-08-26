@@ -1,0 +1,189 @@
+body{
+    overflow-x: hidden;
+}
+.navv{
+    background-color:  #EAEAEA;
+    padding: 10px; 
+    position: fixed;  
+     top: 0;  
+     width: 100%;  
+    transition: top 0.3s;  
+    border-bottom: 2px solid #070b56;
+
+}
+.naver{
+    background-color:  #EAEAEA;
+    
+    width: 20%;
+    height: 550px;
+    border-right: 2px solid #070b56;
+    position: fixed;
+    
+     
+}
+.cont{
+    color: #070b56;
+    font-size: 15px;
+   
+}
+
+.welc{
+    margin-left: 400px;
+    margin-top: 90px;
+    background-color: #EAEAEA;
+    padding: 70px;
+    border-radius: 20px;
+    width: 800px;
+    margin-bottom: 20px;
+    border: 2px solid #070b56;
+
+}
+.welcimg{
+    margin-left: 600px;
+    margin-top: -90px;
+   
+}
+.name{
+    margin-top: 10px;  
+    margin-left: 400px;
+    background-color: #EAEAEA;
+    border-radius: 20px;
+    width: 500px;
+    padding: 20px ;
+    border: 2px solid #070b56;
+
+
+}
+.idc{
+    margin-top: 10px;  
+    margin-left: 400px;
+    background-color: #EAEAEA;
+    border-radius: 20px 20px 20px 0px;
+    width: 400px;
+    padding: 20px;
+    border: 2px solid #070b56;
+
+
+}
+.profile{
+    margin-top: -450px;  
+    border-right: 2px solid #070b56;
+    border-bottom: 2px solid #070b56;
+    border-top: 2px solid #070b56; 
+    margin-left: 810px;
+    background-color: #EAEAEA;
+    border-radius: 20px;
+    width: 400px;
+    padding: 20px;
+
+}
+.tert{
+margin-left: 350px;
+}
+.tet{
+    margin-left: 100px;
+}
+.contd{
+    background-color: #070b56;
+    color: white;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+
+/* PROFILE.HTML */ 
+
+.wel{
+    margin-left: 400px;
+    margin-top: 90px;
+    background-color: #EAEAEA;
+    padding: 70px;
+    border-radius: 20px;
+    border: 2px solid #070b56;
+    width: 800px;
+    margin-bottom: 20px;
+}
+.details{
+    margin-left: 400px;
+    margin-top: 70px;
+    background-color: #EAEAEA;
+    padding: 30px;
+    border: 2px solid #070b56;
+    border-radius: 20px;
+    width: 800px;
+    margin-bottom: 20px;
+}
+
+.det{
+    margin-left: 200px;
+}
+
+/* REGISTRATION.HTML */
+
+.register{
+    margin-left: 400px;
+    margin-top: 90px;
+      background-color: #EAEAEA;
+    padding: 70px;
+    border-radius: 20px;
+    width: 800px;
+    margin-bottom: 20px;
+    border: 2px solid #070b56; 
+
+}
+ 
+ 
+table, th, td {
+    border: 1px solid #070b56 ;
+    border-collapse: collapse;
+    background-color: #EAEAEA;
+    padding: 10px;
+
+    
+  }
+  
+  
+.reg{
+    background-color: #070b56;
+    color: white;
+    padding: 10px 30px 10px 30px;
+    border: none;
+    border-radius: 50px;
+
+}
+
+/* PAYMENT.HTML */
+
+.payment{
+    margin-left: 400px;
+    margin-top: 90px;
+    background-color: #EAEAEA;
+    padding: 70px;
+    border-radius: 20px;
+    width: 350px;
+    margin-bottom: 20px;
+    border: 2px solid #070b56;
+
+}
+.paymet{
+    margin-left: 800px;
+    margin-top: -220px;
+    background-color: #EAEAEA;
+    padding: 70px;
+    border-radius: 20px;
+    width: 350px;
+    margin-bottom: 20px;
+    border: 2px solid #070b56;
+
+}
+.pay{
+    margin-left: 400px;
+    margin-top: 50px;
+    background-color: #EAEAEA;
+    padding: 70px;
+    border-radius: 20px;
+    width: 750px;
+    margin-bottom: 20px;
+    border: 2px solid #070b56;
+
+}
